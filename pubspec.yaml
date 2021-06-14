@@ -31,6 +31,8 @@ dependencies:
   file_picker: ^3.0.2
   ferry: ^0.10.3
   gql_http_link: ^0.4.0
+  ferry_hive_store: ^0.4.3
+  hive_flutter: ^1.0.0
 
 dev_dependencies:
   flutter_test:
