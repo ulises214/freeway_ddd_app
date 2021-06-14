@@ -2,6 +2,8 @@ include: package:very_good_analysis/analysis_options.yaml
 analyzer:
   exclude:
     - lib/generated_plugin_registrant.dart
+    - lib/**.gql.dart
+    - lib/**.gql.g.dart
 linter:
   rules:
     - close_sinks
