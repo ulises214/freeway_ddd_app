@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 
-import '../model/enums/enums.dart';
-import '../model/user/models.dart';
+import '../../model/enums/enums.dart';
+import '../../model/user/models.dart';
 
 /// Controller for SignUp page
 class SignUpViewModel {

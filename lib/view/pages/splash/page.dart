@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../models_view/splash_model_view.dart';
+import '../../../models_view/splash/splash_model_view.dart';
 import '../../assets_paths.dart';
 import 'widgets/loading.dart';
 import 'widgets/top_title.dart';

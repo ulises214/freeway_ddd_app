@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 
 import '../../../../model/enums/enums.dart';
 import '../../../../model/user/models.dart';
-import '../../../../models_view/signup_model_view.dart';
+import '../../../../models_view/signup/signup_model_view.dart';
 import '../../../helpers/validators.dart';
 import '../../../theme.dart';
 import 'fields_required.dart';

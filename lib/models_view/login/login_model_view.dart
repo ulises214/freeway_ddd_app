@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 
-import '../view/pages/login/widgets/email_sent_dialog.dart';
-import '../view/pages/login/widgets/restores_password_dialog.dart';
+import '../../view/pages/login/widgets/email_sent_dialog.dart';
+import '../../view/pages/login/widgets/restores_password_dialog.dart';
 
 /// Controller for login page
 class LoginViewModel {

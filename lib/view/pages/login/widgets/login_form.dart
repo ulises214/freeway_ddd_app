@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:freeway_app/view/theme.dart';
 import 'package:get/get.dart';
 
-import '../../../../models_view/login_model_view.dart';
+import '../../../../models_view/login/login_model_view.dart';
 import '../../../assets_paths.dart';
 import '../../../helpers/validators.dart';
 import '../../../widgets/widgets.dart';

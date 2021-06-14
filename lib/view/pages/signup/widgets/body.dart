@@ -3,7 +3,7 @@ import 'package:freeway_app/view/widgets/widgets.dart';
 import 'package:get/get.dart';
 
 import '../../../../model/enums/enums.dart';
-import '../../../../models_view/signup_model_view.dart';
+import '../../../../models_view/signup/signup_model_view.dart';
 import '../../../theme.dart';
 import 'carrier_form.dart';
 import 'client_form.dart';

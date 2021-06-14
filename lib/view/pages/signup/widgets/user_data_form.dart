@@ -3,7 +3,7 @@ import 'package:freeway_app/view/widgets/widgets.dart';
 import 'package:get/get.dart';
 
 import '../../../../model/user/user_data.dart';
-import '../../../../models_view/signup_model_view.dart';
+import '../../../../models_view/signup/signup_model_view.dart';
 import '../../../helpers/validators.dart';
 import '../../../theme.dart';
 import 'fields_required.dart';

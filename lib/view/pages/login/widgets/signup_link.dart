@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../../models_view/login_model_view.dart';
+import '../../../../models_view/login/login_model_view.dart';
 import '../../../widgets/widgets.dart';
 
 /// Text for go to signup page

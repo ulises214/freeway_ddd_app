@@ -3,7 +3,7 @@ import 'package:freeway_app/view/widgets/widgets.dart';
 import 'package:get/get.dart';
 
 import '../../../../model/travel/models.dart';
-import '../../../../models_view/home_model_view.dart';
+import '../../../../models_view/home/home_model_view.dart';
 import 'recommended_travel_card.dart';
 
 /// Widget that display a list of recomended travels

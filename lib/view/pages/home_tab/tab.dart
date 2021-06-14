@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../models_view/home_model_view.dart';
+import '../../../models_view/home/home_model_view.dart';
 import 'widgets/all_services_list.dart';
 import 'widgets/hightlighted_travel.dart';
 import 'widgets/open_filter_drawer_button.dart';

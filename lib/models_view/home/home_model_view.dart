@@ -1,7 +1,7 @@
 import 'dart:math';
 
-import '../../utils/array/random_element.dart';
-import '../model/travel/models.dart';
+import '../../../utils/array/random_element.dart';
+import '../../model/travel/models.dart';
 
 // ignore: todo
 // ! TODO remove this
