@@ -7,7 +7,6 @@ import '../../../../model/user/models.dart';
 import '../../../../models_view/signup/signup_model_view.dart';
 import '../../../helpers/validators.dart';
 import '../../../theme.dart';
-import 'fields_required.dart';
 import 'form_wrapper.dart';
 
 /// Form for [CarrierData]
@@ -93,7 +92,7 @@ class CarrierForm extends StatelessWidget {
     final personType = _getPersonType(_binarySelectorController.value);
     if (_formKey.currentState?.validate() != true ||
         _filePickerController.value == null) {
-      return showErrorDialog();
+      return showErrorDialog('Todos los datos son requeridos');
     }
     if (FormValidators.isNullOrEmpty(_socialReasonController.text) &&
         personType == null) {

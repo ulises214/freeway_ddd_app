@@ -7,7 +7,6 @@ import '../../../../model/user/client_data.dart';
 import '../../../../models_view/signup/signup_model_view.dart';
 import '../../../helpers/validators.dart';
 import '../../../theme.dart';
-import 'fields_required.dart';
 import 'form_wrapper.dart';
 
 /// Form to get the data of a user of type [UserType.client]
@@ -70,7 +69,9 @@ class ClientForm extends StatelessWidget {
   }
 
   void _verifyData() {
-    if (_formKey.currentState?.validate() != true) return showErrorDialog();
+    if (_formKey.currentState?.validate() != true) {
+      return showErrorDialog('Todos los datos son requeridos');
+    }
     if (_binarySelectorController.value == null) {
       return showErrorDialog('El régimen fiscal es requerido');
     }

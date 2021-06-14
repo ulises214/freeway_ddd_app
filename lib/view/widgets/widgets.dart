@@ -4,6 +4,7 @@ export 'circular_progress.dart';
 export 'confirmation_dialog.dart';
 export 'dialog.dart';
 export 'elevated_logo.dart';
+export 'error_dialog.dart';
 export 'file_picker.dart';
 export 'form_inputs.dart';
 export 'gradient_appbar.dart';

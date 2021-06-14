@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import 'create_graphql_client.dart';
 import 'view/app.dart';
 
 void main() {
@@ -10,5 +11,6 @@ void main() {
       systemNavigationBarIconBrightness: Brightness.light, //bottom bar icons
     ),
   );
+  createGraphqlClient();
   runApp(const App());
 }

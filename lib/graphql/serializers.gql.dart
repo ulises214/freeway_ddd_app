@@ -11,6 +11,16 @@ import 'package:freeway_app/graphql/schema.schema.gql.dart'
         GUserAdminAttributes,
         GUserBuyerAttributes,
         GUserCarrierAttributes;
+import 'package:freeway_app/models_view/login/graphql/login.data.gql.dart'
+    show
+        GLoginData,
+        GLoginData_signIn,
+        GLoginData_signIn_user,
+        GLoginData_signIn_user_cellphone;
+import 'package:freeway_app/models_view/login/graphql/login.req.gql.dart'
+    show GLoginReq;
+import 'package:freeway_app/models_view/login/graphql/login.var.gql.dart'
+    show GLoginVars;
 import 'package:gql_code_builder/src/serializers/operation_serializer.dart'
     show OperationSerializer;
 
@@ -23,6 +33,12 @@ final SerializersBuilder _serializersBuilder = _$serializers.toBuilder()
   GCargoServiceStateUpdateInput,
   GCellphoneAttributes,
   GCreateCargoServiceInput,
+  GLoginData,
+  GLoginData_signIn,
+  GLoginData_signIn_user,
+  GLoginData_signIn_user_cellphone,
+  GLoginReq,
+  GLoginVars,
   GSignInInput,
   GSignUpInput,
   GUserAdminAttributes,

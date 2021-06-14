@@ -6,7 +6,6 @@ import '../../../../model/user/user_data.dart';
 import '../../../../models_view/signup/signup_model_view.dart';
 import '../../../helpers/validators.dart';
 import '../../../theme.dart';
-import 'fields_required.dart';
 import 'form_wrapper.dart';
 
 class _CheckBoxController extends ValueNotifier<bool> {
@@ -105,7 +104,7 @@ class _UserDataFormState extends State<UserDataForm> {
 
   void _verifyData() {
     if (widget._formKey.currentState?.validate() != true) {
-      return showErrorDialog();
+      return showErrorDialog('Todos los datos son requeridos');
     }
     if (checkBoxController.value == false) {
       return showErrorDialog('Debe aceptar los términos y condiciones');

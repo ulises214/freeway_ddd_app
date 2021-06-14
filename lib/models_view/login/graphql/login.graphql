@@ -1,0 +1,11 @@
+mutation Login($input: SignInInput!) {
+  signIn(input: $input) {
+    token
+    user {
+      cellphone {
+        number
+        lada
+      }
+    }
+  }
+}

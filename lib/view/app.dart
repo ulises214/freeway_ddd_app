@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'pages.dart';
+import 'pages/pages.dart';
 import 'theme.dart';
 
 /// The application wrapper, set theme and routes
@@ -14,7 +14,7 @@ class App extends StatelessWidget {
       theme: FreeWayTheme.theme,
       debugShowCheckedModeBanner: false,
       title: 'FreeWay',
-      initialRoute: '/home',
+      initialRoute: '/login',
       getPages: [
         GetPage(name: '/splash', page: () => const SplashPage()),
         GetPage(name: '/login', page: () => const LoginPage()),

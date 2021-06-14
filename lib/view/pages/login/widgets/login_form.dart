@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:freeway_app/view/theme.dart';
 import 'package:get/get.dart';
 
+import '../../../../model/user/models.dart';
 import '../../../../models_view/login/login_model_view.dart';
 import '../../../assets_paths.dart';
 import '../../../helpers/validators.dart';
@@ -54,8 +55,10 @@ class LoginForm extends StatelessWidget {
         'Iniciar sesión',
         onPressed: () {
           if (_formKey.currentState?.validate() == true) {
-            _loginViewModel.login(_phoneFieldController.text,
-                _passwordControllerFieldController.text);
+            _loginViewModel.login(UserData(
+              password: _passwordControllerFieldController.text,
+              phoneNumber: _phoneFieldController.text,
+            ));
           }
         },
       ),
