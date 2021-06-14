@@ -28,7 +28,6 @@ class _StarsFilterInput extends StatefulWidget {
 class __StarsFilterInputState extends State<_StarsFilterInput> {
   int? _selectedIndex;
   void _changeSelectedChip(int index) {
-    print(index);
     setState(() {
       if (index == _selectedIndex) return _selectedIndex = null;
       _selectedIndex = index;

@@ -1,4 +1,8 @@
 include: package:very_good_analysis/analysis_options.yaml
-analyzeranalyzer:
-  errors:
-    close_sinks: true
+analyzer:
+  exclude:
+    - lib/generated_plugin_registrant.dart
+linter:
+  rules:
+    - close_sinks
+    - one_member_abstracts
