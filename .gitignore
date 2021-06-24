@@ -49,5 +49,5 @@ app.*.map.json
 .fvm/flutter_sdk
 
 # Generated files
-lib/**.gql.dart
-lib/**.gql.g.dart
+**/*.gql.dart
+**/*.gql.g.dart
