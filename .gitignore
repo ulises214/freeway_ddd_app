@@ -47,3 +47,7 @@ app.*.map.json
 
 # fvm folfer
 .fvm/flutter_sdk
+
+# Generated files
+lib/**.gql.dart
+lib/**.gql.g.dart
