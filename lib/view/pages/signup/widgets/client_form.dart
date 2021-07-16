@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:freeway_app/view/widgets/dalogs.dart/dialogs_manager.dart';
 import 'package:freeway_app/view/widgets/widgets.dart';
 import 'package:get/get.dart';
 
@@ -13,6 +14,7 @@ import 'form_wrapper.dart';
 class ClientForm extends StatelessWidget {
   /// Creates a form for [UserType.client] type
   ClientForm({Key? key, required this.onSubmit}) : super(key: key);
+  final DialogsManager _dialogsManager = Get.find();
 
   final _formKey = GlobalKey<FormState>();
 
@@ -70,10 +72,12 @@ class ClientForm extends StatelessWidget {
 
   void _verifyData() {
     if (_formKey.currentState?.validate() != true) {
-      return showErrorDialog('Todos los datos son requeridos');
+      return _dialogsManager.showErrorDialog(
+          text: 'Todos los datos son requeridos');
     }
     if (_binarySelectorController.value == null) {
-      return showErrorDialog('El régimen fiscal es requerido');
+      return _dialogsManager.showErrorDialog(
+          text: 'El régimen fiscal es requerido');
     }
     _saveData();
   }

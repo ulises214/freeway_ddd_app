@@ -18,7 +18,7 @@ class AllServicesList extends StatefulWidget {
 }
 
 class _AllServicesListState extends State<AllServicesList> {
-  int _itemsCount = 60;
+  final _itemsCount = 60;
   final _random = Random();
   SimpleTravel _buildTravel() => SimpleTravel(
       origin: 'Manzanillo',

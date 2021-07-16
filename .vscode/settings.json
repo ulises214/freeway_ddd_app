@@ -7,7 +7,9 @@
   "files.watcherExclude": {
     "**/.fvm": true
   },
-
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": false
+  },
   "[dart]": {
     "editor.formatOnSave": true,
     "editor.formatOnType": false,

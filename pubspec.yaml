@@ -40,6 +40,8 @@ dev_dependencies:
   very_good_analysis: ^2.1.0
   ferry_generator: ^0.4.3
   build_runner: ^2.0.4
+  mockito: ^5.0.10
+  faker: ^2.0.0
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'texts.dart';
+import '../texts.dart';
 
 /// A dialog base, provides shape, color and padings
 class BasicDialog extends StatelessWidget {

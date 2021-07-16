@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../assets_paths.dart';
-import '../theme.dart';
+import '../../assets_paths.dart';
+import '../../theme.dart';
+import '../rounded_buttons.dart';
+import '../svg_icon.dart';
+import '../texts.dart';
 import 'dialog.dart';
-import 'rounded_buttons.dart';
-import 'svg_icon.dart';
-import 'texts.dart';
 
 /// Dialog to show a success message
 class ConfirmationDialog extends StatelessWidget {
@@ -14,8 +14,11 @@ class ConfirmationDialog extends StatelessWidget {
   const ConfirmationDialog({
     required this.content,
     Key? key,
-    this.title = 'Éxito',
+    this.title = defualtTitle,
   }) : super(key: key);
+
+  /// The title used when [title] isn't provided
+  static const defualtTitle = 'Éxito';
 
   /// The title for the dialog
   final String title;

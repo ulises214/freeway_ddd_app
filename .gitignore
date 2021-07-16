@@ -51,3 +51,4 @@ app.*.map.json
 # Generated files
 **/*.gql.dart
 **/*.gql.g.dart
+**/*.mocks.dart

@@ -1,59 +1,62 @@
 import 'package:ferry/ferry.dart';
+import 'package:freeway_app/graphq_requests/user/user_requests.dart';
 import 'package:freeway_app/router.dart';
-import 'package:freeway_app/view/widgets/widgets.dart';
+import 'package:freeway_app/view/pages/login/widgets/restores_password_dialog.dart';
+import 'package:freeway_app/view/widgets/dalogs.dart/dialogs_manager.dart';
 import 'package:get/get.dart';
 
 import '../../../model/user/models.dart';
-import '../../view/pages/login/widgets/email_sent_dialog.dart';
-import '../../view/pages/login/widgets/restores_password_dialog.dart';
-import 'graphql/login.req.gql.dart';
 
 /// Controller for login page
 class LoginViewModel {
-  /// Initialize state
-  LoginViewModel();
   final _client = Get.find<Client>();
+  final UserRequestsBuilder _requesBuilder = Get.find();
+  final FreeWayRouter _router = Get.find();
+  final DialogsManager _dialogsManager = Get.find();
 
   /// Send login data to get the token and redirect to next page
   Future<void> login(UserData userData) async {
-    final req = GLoginReq(
-      (b) => b
-        ..vars.input.cellphone.lada = userData.lada
-        ..vars.input.cellphone.number = userData.phoneNumber
-        ..vars.input.password = userData.password,
-    );
+    final req = _requesBuilder.loginRequest(userData);
     try {
       final result = await _client
           .request(req)
           .firstWhere((res) => res.dataSource != DataSource.Optimistic);
-      if (result.data != null) {
-        return Router.toHomeFromLogin(result.data!.signIn!.token);
+      if (result.data?.signIn != null) {
+        return _router.toHomeFromLogin(result.data!.signIn!.token);
       } else if (result.linkException != null) {
-        return showErrorDialog(result.linkException.toString());
+        return _dialogsManager.showErrorDialog(
+          title: 'Error de conexión',
+          text: result.linkException.toString(),
+        );
       } else if (result.hasErrors) {
-        return showErrorDialog(result.graphqlErrors!.first.message);
+        return _dialogsManager.showErrorDialog(
+          title: 'Error de datos',
+          text: result.graphqlErrors!.first.message,
+        );
       }
     } catch (e) {
-      return showErrorDialog(e.toString());
+      return _dialogsManager.showErrorDialog(text: e.toString());
     }
   }
 
   /// Send a request to restore password in a email sent to [email]
   Future<void> requestRestorePassword(String email) async {
-    Router.closeDialog();
-    showEmailSentDialog();
+    _router.closeDialog();
+    _dialogsManager.showCustomDialog(RestorePasswordDialog());
   }
 
   /// Go to signup page to register a new user
-  void goToSignup() => Router.goToSignup();
+  void goToSignup() => _router.goToSignup();
 
   /// Show a dialog to request a restere password email
   void showRestorePasswordDialog() {
-    Get.dialog(RestorePasswordDialog());
+    _dialogsManager.showCustomDialog(RestorePasswordDialog());
   }
 
   /// Show confirmation when the email was sent
   void showEmailSentDialog() {
-    Get.dialog(const EmailSentDialog());
+    _dialogsManager.showConfirmationDialog(
+        content: 'El correo para restablecer tu contraseña se ha enviado, '
+            'no olvides revisar en tu carpeta de spam.');
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:freeway_app/view/widgets/dalogs.dart/dialogs_manager.dart';
 import 'package:freeway_app/view/widgets/widgets.dart';
 import 'package:get/get.dart';
 
@@ -30,7 +31,7 @@ class UserDataForm extends StatefulWidget {
 
 class _UserDataFormState extends State<UserDataForm> {
   final checkBoxController = _CheckBoxController();
-
+  final DialogsManager _dialogsManager = Get.find();
   @override
   Widget build(BuildContext context) {
     return FormWrapper(
@@ -104,10 +105,12 @@ class _UserDataFormState extends State<UserDataForm> {
 
   void _verifyData() {
     if (widget._formKey.currentState?.validate() != true) {
-      return showErrorDialog('Todos los datos son requeridos');
+      return _dialogsManager.showErrorDialog(
+          text: 'Todos los datos son requeridos');
     }
     if (checkBoxController.value == false) {
-      return showErrorDialog('Debe aceptar los términos y condiciones');
+      return _dialogsManager.showErrorDialog(
+          text: 'Debe aceptar los términos y condiciones');
     }
 
     Get.find<SignUpViewModel>().userData = UserData(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:freeway_app/view/widgets/dalogs.dart/dialogs_manager.dart';
 import 'package:freeway_app/view/widgets/widgets.dart';
 import 'package:get/get.dart';
 
@@ -16,6 +17,7 @@ class CarrierForm extends StatelessWidget {
     Key? key,
     required this.onSubmit,
   }) : super(key: key);
+  final DialogsManager _dialogsMAnager = Get.find();
 
   /// Function to call when fields are filled
   final VoidCallback onSubmit;
@@ -92,12 +94,15 @@ class CarrierForm extends StatelessWidget {
     final personType = _getPersonType(_binarySelectorController.value);
     if (_formKey.currentState?.validate() != true ||
         _filePickerController.value == null) {
-      return showErrorDialog('Todos los datos son requeridos');
+      return _dialogsMAnager.showErrorDialog(
+          text: 'Todos los datos son requeridos');
     }
     if (FormValidators.isNullOrEmpty(_socialReasonController.text) &&
         personType == null) {
-      return showErrorDialog('La razón social y el régimen fiscal no'
-          ' pueden estar vacíos al mismo tiempo');
+      return _dialogsMAnager.showErrorDialog(
+        text: 'La razón social y el régimen fiscal no'
+            ' pueden estar vacíos al mismo tiempo',
+      );
     }
     _saveData(personType);
   }

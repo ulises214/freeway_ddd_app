@@ -1,22 +1,24 @@
+import 'package:ferry/ferry.dart';
 import 'package:get/get.dart';
 
 import 'create_graphql_client.dart';
 
 /// Routes manager for application
-class Router {
+class FreeWayRouter {
   /// Update token and go to home page
-  static void toHomeFromLogin(String token) async {
-    await createGraphqlClient(token);
+  void toHomeFromLogin(String token) async {
+    await Get.delete<Client>();
+    Get.put(await createGraphqlClient(token));
     await Get.offAllNamed('/home');
   }
 
   /// Open signup page and it can back
-  static void goToSignup() {
+  void goToSignup() {
     Get.toNamed('/signup');
   }
 
   ///  Close a dialog if an dialog is open
-  static void closeDialog() {
+  void closeDialog() {
     if (Get.isDialogOpen == true) Get.back();
   }
 }
