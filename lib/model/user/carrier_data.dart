@@ -15,6 +15,7 @@ class CarrierData {
     required this.businessName,
     required this.email,
     required this.opinionCompliance,
+    required this.name,
   }) {
     if (personType == null && FormValidators.isNullOrEmpty(socialReason)) {
       throw Exception(
@@ -37,6 +38,9 @@ class CarrierData {
 
   /// A valid email address
   final String email;
+
+  /// The name of the carrier
+  final String name;
 
   /// File taken from the device to prove its veracity
   final File opinionCompliance;

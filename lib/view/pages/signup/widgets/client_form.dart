@@ -24,7 +24,7 @@ class ClientForm extends StatelessWidget {
   final _binarySelectorController = BinarySelectorController();
   final _nameController = TextEditingController();
   final _emailController = TextEditingController();
-
+  final _businessNameController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return FormWrapper(
@@ -67,6 +67,11 @@ class ClientForm extends StatelessWidget {
         controller: _emailController,
         validator: FormValidators.isEmailAndRequired,
       ),
+      StyledFormInput(
+        label: 'Nombre de la empresa *',
+        controller: _businessNameController,
+        validator: FormValidators.isRequired,
+      ),
     ].expand((w) => [w, const SizedBox(height: 15)]).toList();
   }
 
@@ -92,6 +97,7 @@ class ClientForm extends StatelessWidget {
       personType: personType,
       name: _nameController.text,
       email: _emailController.text,
+      businessName: _businessNameController.text,
     );
     onSubmit();
   }

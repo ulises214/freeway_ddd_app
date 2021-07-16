@@ -30,6 +30,7 @@ class CarrierForm extends StatelessWidget {
   final _addresController = TextEditingController();
   final _businessNameController = TextEditingController();
   final _emailController = TextEditingController();
+  final _nameController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -62,6 +63,11 @@ class CarrierForm extends StatelessWidget {
           textColor: FreeWayTheme.black,
         ),
         controller: _binarySelectorController,
+      ),
+      StyledFormInput(
+        label: 'Nombre completo *',
+        controller: _nameController,
+        validator: FormValidators.isRequired,
       ),
       StyledFormInput(
         label: 'Razón social',
@@ -114,6 +120,7 @@ class CarrierForm extends StatelessWidget {
         address: _addresController.text,
         businessName: _businessNameController.text,
         email: _emailController.text,
+        name: _nameController.text,
         opinionCompliance: _filePickerController.value!);
     onSubmit();
   }
