@@ -29,8 +29,7 @@ class NotificationIcon extends StatelessWidget {
               right: 10.0,
               top: 10.0,
               child: IgnorePointer(
-                child: Icon(Icons.brightness_1,
-                    color: FreeWayTheme.danger, size: 9.0),
+                child: Icon(Icons.brightness_1, color: FreeWayTheme.danger, size: 9.0),
               ),
             ),
           ],

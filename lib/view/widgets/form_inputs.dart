@@ -36,8 +36,7 @@ class StyledPasswordFormInput extends StatefulWidget {
   final bool displayIcon;
 
   @override
-  _StyledPasswordFormInputState createState() =>
-      _StyledPasswordFormInputState();
+  _StyledPasswordFormInputState createState() => _StyledPasswordFormInputState();
 }
 
 class _StyledPasswordFormInputState extends State<StyledPasswordFormInput> {
@@ -49,8 +48,7 @@ class _StyledPasswordFormInputState extends State<StyledPasswordFormInput> {
       hiddeText: _isPasswordHidden,
       label: widget.label,
       prefixIcon: widget.displayIcon
-          ? SvgIcon(
-              svgPath: AssetsPaths.icons.password, color: FreeWayTheme.gray3)
+          ? SvgIcon(svgPath: AssetsPaths.icons.password, color: FreeWayTheme.gray3)
           : null,
       validator: widget.validator,
       sufixIcon: ClipOval(
@@ -58,8 +56,7 @@ class _StyledPasswordFormInputState extends State<StyledPasswordFormInput> {
           color: Colors.transparent,
           child: InkWell(
             onTap: () => setState(() => _isPasswordHidden = !_isPasswordHidden),
-            child: SvgIcon(
-                svgPath: AssetsPaths.icons.eye, color: FreeWayTheme.gray4),
+            child: SvgIcon(svgPath: AssetsPaths.icons.eye, color: FreeWayTheme.gray4),
           ),
         ),
       ),
@@ -116,10 +113,7 @@ class StyledFormInput extends StatelessWidget {
       keyboardType: keyboardType,
       obscureText: hiddeText,
       validator: validator,
-      style: Theme.of(context)
-          .textTheme
-          .bodyText1!
-          .copyWith(color: FreeWayTheme.black),
+      style: Theme.of(context).textTheme.bodyText1!.copyWith(color: FreeWayTheme.black),
       decoration: InputDecoration(
           enabledBorder: _border,
           focusedBorder: _focusedBorder,
@@ -132,15 +126,12 @@ class StyledFormInput extends StatelessWidget {
           floatingLabelBehavior: FloatingLabelBehavior.auto,
           prefixIcon: prefixIcon,
           prefixStyle: const TextStyle(color: FreeWayTheme.gray4),
-          prefixIconConstraints: const BoxConstraints(
-              minHeight: 0.0, maxHeight: 14.0, minWidth: 32.0),
-          suffixIconConstraints: const BoxConstraints(
-              minHeight: 0.0, maxHeight: 32.0, minWidth: 32.0),
+          prefixIconConstraints:
+              const BoxConstraints(minHeight: 0.0, maxHeight: 14.0, minWidth: 32.0),
+          suffixIconConstraints:
+              const BoxConstraints(minHeight: 0.0, maxHeight: 32.0, minWidth: 32.0),
           suffixIcon: sufixIcon,
-          labelStyle: Theme.of(context)
-              .textTheme
-              .bodyText1!
-              .copyWith(color: FreeWayTheme.gray4)),
+          labelStyle: Theme.of(context).textTheme.bodyText1!.copyWith(color: FreeWayTheme.gray4)),
     );
   }
 }

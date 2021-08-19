@@ -77,21 +77,18 @@ class ClientForm extends StatelessWidget {
 
   void _verifyData() {
     if (_formKey.currentState?.validate() != true) {
-      return _dialogsManager.showErrorDialog(
-          text: 'Todos los datos son requeridos');
+      return _dialogsManager.showErrorDialog(text: 'Todos los datos son requeridos');
     }
     if (_binarySelectorController.value == null) {
-      return _dialogsManager.showErrorDialog(
-          text: 'El régimen fiscal es requerido');
+      return _dialogsManager.showErrorDialog(text: 'El régimen fiscal es requerido');
     }
     _saveData();
   }
 
   void _saveData() {
-    final personType =
-        _binarySelectorController.value == BinarySelectorValues.left
-            ? PersonType.physic
-            : PersonType.moral;
+    final personType = _binarySelectorController.value == BinarySelectorValues.left
+        ? PersonType.physic
+        : PersonType.moral;
 
     Get.find<SignUpViewModel>().clientData = ClientData(
       personType: personType,

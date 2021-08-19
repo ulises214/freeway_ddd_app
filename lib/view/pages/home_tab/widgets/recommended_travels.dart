@@ -26,9 +26,7 @@ class RecommendedTravels extends StatelessWidget {
               return const StyledText('Error', type: StyledTextType.body1);
             }
             return Row(
-              children: snapshot.data!
-                  .map((e) => RecommendedTravelCard(travel: e))
-                  .toList(),
+              children: snapshot.data!.map((e) => RecommendedTravelCard(travel: e)).toList(),
             );
           },
         ),

@@ -30,14 +30,12 @@ class StarsIndicator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return IconTheme(
-      data:
-          const IconThemeData.fallback().copyWith(color: FreeWayTheme.warning),
+      data: const IconThemeData.fallback().copyWith(color: FreeWayTheme.warning),
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: List.generate(
           incomplete ? ranking : 5,
-          (index) =>
-              Icon(ranking >= index + 1 ? Icons.star : Icons.star_border),
+          (index) => Icon(ranking >= index + 1 ? Icons.star : Icons.star_border),
         ),
       ),
     );

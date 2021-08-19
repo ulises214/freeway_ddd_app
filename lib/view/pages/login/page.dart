@@ -35,8 +35,7 @@ class _LoginPageState extends State<LoginPage> {
       resizeToAvoidBottomInset: false,
       body: Container(
         constraints: const BoxConstraints.expand(),
-        decoration:
-            const BoxDecoration(gradient: FreeWayTheme.verticalGradient),
+        decoration: const BoxDecoration(gradient: FreeWayTheme.verticalGradient),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 32.0),
           child: SafeArea(

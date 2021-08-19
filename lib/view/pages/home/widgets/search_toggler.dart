@@ -32,9 +32,7 @@ class SearchToggler extends StatelessWidget {
         key: ValueKey<bool>(isSearching),
         onPressed: onPressed,
         icon: SvgIcon(
-            svgPath: isSearching
-                ? AssetsPaths.icons.cancel
-                : AssetsPaths.icons.search,
+            svgPath: isSearching ? AssetsPaths.icons.cancel : AssetsPaths.icons.search,
             size: isSearching ? 16 : 22,
             color: Colors.white),
       ),

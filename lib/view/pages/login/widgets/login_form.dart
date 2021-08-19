@@ -29,9 +29,7 @@ class LoginForm extends StatelessWidget {
           children: [
             const SizedBox(height: 10.0),
             ..._builFields(),
-          ]
-              .expand((element) => [element, const SizedBox(height: 15.0)])
-              .toList(),
+          ].expand((element) => [element, const SizedBox(height: 15.0)]).toList(),
         ),
       ),
     );

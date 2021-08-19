@@ -11,11 +11,7 @@ import 'title.dart';
 import 'user_data_form.dart';
 import 'user_type_selector.dart';
 
-final _stepTitles = [
-  'Tipo de cuenta',
-  'Datos personales',
-  'Datos de la cuenta'
-];
+final _stepTitles = ['Tipo de cuenta', 'Datos personales', 'Datos de la cuenta'];
 
 /// Stepper form for signup form
 ///
@@ -54,21 +50,17 @@ class _SignUpFormBodyState extends State<SignUpFormBody> {
         Expanded(
           child: Theme(
             data: Theme.of(context).copyWith(
-                colorScheme: Theme.of(context)
-                    .colorScheme
-                    .copyWith(secondary: FreeWayTheme.extraBlue3)),
+                colorScheme:
+                    Theme.of(context).colorScheme.copyWith(secondary: FreeWayTheme.extraBlue3)),
             child: Stepper(
               currentStep: _currentStep,
               type: StepperType.horizontal,
               onStepCancel: _currentStep > 0 ? _cancelStep : null,
               controlsBuilder: (_, {onStepCancel, onStepContinue}) {
-                return _buildControllers(
-                    step: _currentStep, onStepCancel: onStepCancel);
+                return _buildControllers(step: _currentStep, onStepCancel: onStepCancel);
               },
-              steps: List.generate(
-                  3,
-                  (index) =>
-                      _buildStep(index, stepContents[index], _currentStep)),
+              steps:
+                  List.generate(3, (index) => _buildStep(index, stepContents[index], _currentStep)),
             ),
           ),
         ),

@@ -6,8 +6,7 @@ import 'gradient_preferred_size_widget.dart';
 /// Custom appbar with a gradient background
 class GradientAppBar extends StatelessWidget implements PreferredSizeWidget {
   /// Creates a custom appbar that seeks to implement the material [AppBar]
-  const GradientAppBar(
-      {Key? key, required this.title, this.actions = const [], this.bottom})
+  const GradientAppBar({Key? key, required this.title, this.actions = const [], this.bottom})
       : super(key: key);
 
   /// The title for this widget
@@ -33,10 +32,7 @@ class GradientAppBar extends StatelessWidget implements PreferredSizeWidget {
           elevation: bottom == null ? 4.0 : 0.0,
           child: Material(
             color: Colors.transparent,
-            textStyle: Theme.of(context)
-                .textTheme
-                .headline6!
-                .copyWith(color: Colors.white),
+            textStyle: Theme.of(context).textTheme.headline6!.copyWith(color: Colors.white),
             child: Padding(
               padding: const EdgeInsets.only(left: 16.0),
               child: Row(children: [Expanded(child: title), ...actions]),

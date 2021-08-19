@@ -52,10 +52,7 @@ class SearchField extends StatelessWidget {
           filled: true,
           isCollapsed: true,
           hintStyle: hintColor != null
-              ? Theme.of(context)
-                  .textTheme
-                  .bodyText1!
-                  .copyWith(color: hintColor)
+              ? Theme.of(context).textTheme.bodyText1!.copyWith(color: hintColor)
               : null,
           hintText: hintText,
           border: InputBorder.none,

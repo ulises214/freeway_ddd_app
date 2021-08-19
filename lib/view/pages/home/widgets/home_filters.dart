@@ -26,9 +26,7 @@ class _HomeFiltersState extends State<HomeFilters> {
             const SizedBox(
               width: 10.0,
             ),
-            ..._buildFilters()
-                .expand((element) => [element, const SizedBox(width: 10.0)])
-                .toList()
+            ..._buildFilters().expand((element) => [element, const SizedBox(width: 10.0)]).toList()
           ],
         ),
       ),
@@ -45,6 +43,5 @@ class _HomeFiltersState extends State<HomeFilters> {
     );
   }
 
-  void _changeSelectedIndex(int selectedIndex) =>
-      setState(() => _selectedIndex = selectedIndex);
+  void _changeSelectedIndex(int selectedIndex) => setState(() => _selectedIndex = selectedIndex);
 }

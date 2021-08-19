@@ -56,10 +56,7 @@ class __StarsFilterInputState extends State<_StarsFilterInput> {
 
 class _StarFilterChip extends StatelessWidget {
   const _StarFilterChip(
-      {Key? key,
-      required this.ranking,
-      required this.isSelected,
-      required this.onSelected})
+      {Key? key, required this.ranking, required this.isSelected, required this.onSelected})
       : super(key: key);
 
   final int ranking;

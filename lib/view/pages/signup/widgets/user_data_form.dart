@@ -77,10 +77,9 @@ class _UserDataFormState extends State<UserDataForm> {
         label: 'Repetir contraseña *',
         validator: (passwordConfirmation) => FormValidators.isRequired(
             passwordConfirmation,
-            (passwordConfirmation) =>
-                (widget._passwordController.text != passwordConfirmation)
-                    ? 'Las contraseñas no coinciden'
-                    : null),
+            (passwordConfirmation) => (widget._passwordController.text != passwordConfirmation)
+                ? 'Las contraseñas no coinciden'
+                : null),
         displayIcon: false,
       ),
       Row(
@@ -88,10 +87,8 @@ class _UserDataFormState extends State<UserDataForm> {
           Checkbox(
               checkColor: Colors.white,
               value: checkBoxController.value,
-              fillColor: MaterialStateProperty.resolveWith(
-                  (states) => FreeWayTheme.officialBlue2),
-              onChanged: (selected) =>
-                  setState(() => checkBoxController.value = selected!)),
+              fillColor: MaterialStateProperty.resolveWith((states) => FreeWayTheme.officialBlue2),
+              onChanged: (selected) => setState(() => checkBoxController.value = selected!)),
           Flexible(
             child: TextLink(
               text: 'Acepto los términos y condicioones de uso del servicio',
@@ -105,12 +102,10 @@ class _UserDataFormState extends State<UserDataForm> {
 
   void _verifyData() {
     if (widget._formKey.currentState?.validate() != true) {
-      return _dialogsManager.showErrorDialog(
-          text: 'Todos los datos son requeridos');
+      return _dialogsManager.showErrorDialog(text: 'Todos los datos son requeridos');
     }
     if (checkBoxController.value == false) {
-      return _dialogsManager.showErrorDialog(
-          text: 'Debe aceptar los términos y condiciones');
+      return _dialogsManager.showErrorDialog(text: 'Debe aceptar los términos y condiciones');
     }
 
     Get.find<SignUpViewModel>().userData = UserData(

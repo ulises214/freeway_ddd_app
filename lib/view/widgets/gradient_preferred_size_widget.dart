@@ -4,13 +4,11 @@ import '../theme.dart';
 
 /// Widget with gradient background that implements
 /// [PreferredSizeWidget] like an [AppBar]
-class GradientPreferredSizeWidget extends StatelessWidget
-    implements PreferredSizeWidget {
+class GradientPreferredSizeWidget extends StatelessWidget implements PreferredSizeWidget {
   /// Creates a widget with gradient background
   ///
   /// Ideal to implement an appbar and the bottom of an appbar
-  const GradientPreferredSizeWidget(
-      {Key? key, required this.child, this.elevation})
+  const GradientPreferredSizeWidget({Key? key, required this.child, this.elevation})
       : super(key: key);
 
   /// The widget below this widget in the tree.

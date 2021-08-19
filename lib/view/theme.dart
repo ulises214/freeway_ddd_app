@@ -61,8 +61,7 @@ abstract class FreeWayTheme {
     final baseTextTheme = lightTheme.textTheme;
     final textTheme = baseTextTheme
         .copyWith(
-          bodyText1:
-              baseTextTheme.bodyText1!.copyWith(fontWeight: FontWeight.w400),
+          bodyText1: baseTextTheme.bodyText1!.copyWith(fontWeight: FontWeight.w400),
           bodyText2: baseTextTheme.bodyText2!.copyWith(
             fontSize: 18,
           ),

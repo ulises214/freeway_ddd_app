@@ -98,13 +98,10 @@ class CarrierForm extends StatelessWidget {
 
   void _verifyData() {
     final personType = _getPersonType(_binarySelectorController.value);
-    if (_formKey.currentState?.validate() != true ||
-        _filePickerController.value == null) {
-      return _dialogsMAnager.showErrorDialog(
-          text: 'Todos los datos son requeridos');
+    if (_formKey.currentState?.validate() != true || _filePickerController.value == null) {
+      return _dialogsMAnager.showErrorDialog(text: 'Todos los datos son requeridos');
     }
-    if (FormValidators.isNullOrEmpty(_socialReasonController.text) &&
-        personType == null) {
+    if (FormValidators.isNullOrEmpty(_socialReasonController.text) && personType == null) {
       return _dialogsMAnager.showErrorDialog(
         text: 'La razón social y el régimen fiscal no'
             ' pueden estar vacíos al mismo tiempo',

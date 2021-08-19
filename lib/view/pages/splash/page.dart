@@ -16,8 +16,7 @@ class SplashPage extends StatefulWidget {
 class _SplashPageState extends State<SplashPage> {
   @override
   void initState() {
-    WidgetsBinding.instance
-        ?.addPostFrameCallback((_) => SplashViewModel().requestUserInfo());
+    WidgetsBinding.instance?.addPostFrameCallback((_) => SplashViewModel().requestUserInfo());
     super.initState();
   }
 

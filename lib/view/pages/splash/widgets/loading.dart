@@ -9,10 +9,7 @@ class BottomLoading extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: const [
-        CircularLoading(),
-        StyledText('Cargando', type: StyledTextType.body1)
-      ],
+      children: const [CircularLoading(), StyledText('Cargando', type: StyledTextType.body1)],
     );
   }
 }

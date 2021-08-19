@@ -46,8 +46,7 @@ class _HomeTabState extends State<HomeTab> {
                 SizedBox(height: 20),
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  child: SizedBox(
-                      width: double.infinity, child: AllServicesList()),
+                  child: SizedBox(width: double.infinity, child: AllServicesList()),
                 ),
               ],
             ),

@@ -86,9 +86,7 @@ class _CardDescription extends StatelessWidget {
               const StyledText('Lugar de origen:',
                   type: StyledTextType.body3, textColor: FreeWayTheme.gray3),
               StyledText(origin,
-                  type: StyledTextType.body3,
-                  bold: true,
-                  textColor: FreeWayTheme.gray3)
+                  type: StyledTextType.body3, bold: true, textColor: FreeWayTheme.gray3)
             ]),
           ],
         ),

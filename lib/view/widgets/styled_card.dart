@@ -44,8 +44,7 @@ class StyledCard extends StatelessWidget {
           children: [
             if (title != null)
               Padding(
-                padding: EdgeInsets.only(
-                    top: tinyTitle ? 0.0 : 10.0, left: 10.0, right: 10.0),
+                padding: EdgeInsets.only(top: tinyTitle ? 0.0 : 10.0, left: 10.0, right: 10.0),
                 child: title!,
               ),
             if (hasDivider) const Divider(),

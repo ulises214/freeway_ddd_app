@@ -18,9 +18,7 @@ class SignUpLink extends StatelessWidget {
           type: StyledTextType.body1,
           textColor: Colors.white,
         ),
-        TextLink(
-            text: ' Regístrate',
-            onPressed: Get.find<LoginViewModel>().goToSignup),
+        TextLink(text: ' Regístrate', onPressed: Get.find<LoginViewModel>().goToSignup),
       ],
     );
   }

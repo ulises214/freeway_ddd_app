@@ -62,8 +62,7 @@ class StyledText extends StatelessWidget {
         : bold == true
             ? FontWeight.bold
             : textStyleBase.fontWeight;
-    final fontStyle =
-        italic == true ? FontStyle.italic : textStyleBase.fontStyle;
+    final fontStyle = italic == true ? FontStyle.italic : textStyleBase.fontStyle;
     return Text(
       _text,
       style: textStyleBase.copyWith(

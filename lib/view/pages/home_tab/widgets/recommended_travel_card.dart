@@ -8,8 +8,7 @@ import '../../../theme.dart';
 /// A Card widget that represent a recommentded travel
 class RecommendedTravelCard extends StatelessWidget {
   /// Create the card to represent a travel
-  const RecommendedTravelCard({Key? key, required this.travel})
-      : super(key: key);
+  const RecommendedTravelCard({Key? key, required this.travel}) : super(key: key);
 
   /// The travel that this widget display
   final RecomendedTravel travel;
@@ -26,8 +25,7 @@ class RecommendedTravelCard extends StatelessWidget {
             urlImage: travel.uriProfileImage,
           ),
           Padding(
-            padding:
-                const EdgeInsets.symmetric(vertical: 4.0, horizontal: 16.0),
+            padding: const EdgeInsets.symmetric(vertical: 4.0, horizontal: 16.0),
             child: _CardDescription(travel: travel),
           ),
         ]),
@@ -113,9 +111,7 @@ class _CardDescription extends StatelessWidget {
                 const StyledText('Lugar de origen: ',
                     type: StyledTextType.body3, textColor: FreeWayTheme.gray3),
                 StyledText(travel.origin,
-                    type: StyledTextType.body3,
-                    bold: true,
-                    textColor: FreeWayTheme.gray3)
+                    type: StyledTextType.body3, bold: true, textColor: FreeWayTheme.gray3)
               ]),
               const SizedBox(height: 5),
               StarsIndicator(

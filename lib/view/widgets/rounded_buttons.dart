@@ -62,9 +62,7 @@ class RoundedButton extends StatelessWidget {
   ///
   /// If [size] isn't provided it will take the minimum width with more paddings
   static Widget gradient(String text,
-      {RoundedButtonSize size = RoundedButtonSize.short,
-      Widget? icon,
-      VoidCallback? onPressed}) {
+      {RoundedButtonSize size = RoundedButtonSize.short, Widget? icon, VoidCallback? onPressed}) {
     return RoundedButton._(text,
         gradientBackground: FreeWayTheme.horizontalGradient,
         size: size,
@@ -77,9 +75,7 @@ class RoundedButton extends StatelessWidget {
   ///
   /// If [size] isn't provided it will take the minimum width with more paddings
   static Widget white(String text,
-      {RoundedButtonSize size = RoundedButtonSize.short,
-      Widget? icon,
-      VoidCallback? onPressed}) {
+      {RoundedButtonSize size = RoundedButtonSize.short, Widget? icon, VoidCallback? onPressed}) {
     return RoundedButton._(text,
         size: size,
         icon: icon,
@@ -93,9 +89,7 @@ class RoundedButton extends StatelessWidget {
   ///
   /// If [size] isn't provided it will take the minimum width with more paddings
   static Widget gray(String text,
-      {RoundedButtonSize size = RoundedButtonSize.short,
-      Widget? icon,
-      VoidCallback? onPressed}) {
+      {RoundedButtonSize size = RoundedButtonSize.short, Widget? icon, VoidCallback? onPressed}) {
     return RoundedButton._(text,
         size: size,
         onPressed: onPressed,

@@ -23,8 +23,7 @@ class _LogosPaths {
 }
 
 class _IconsPaths {
-  static String _buildPathName(String name, [String ext = 'svg']) =>
-      'assets/icons/$name.$ext';
+  static String _buildPathName(String name, [String ext = 'svg']) => 'assets/icons/$name.$ext';
 
   final searchService = _buildPathName('signInSearch');
   final offerService = _buildPathName('signInOffer');

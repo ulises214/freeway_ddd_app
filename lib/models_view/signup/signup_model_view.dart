@@ -40,8 +40,7 @@ class SignUpViewModel {
   ///
   /// Throws an Exception if data are null
   Future<void> signup() async {
-    if ((userType == null || _userData == null) ||
-        (_carrierData == null && _clientData == null)) {
+    if ((userType == null || _userData == null) || (_carrierData == null && _clientData == null)) {
       throw Exception('Faltan datos webon');
     }
     if (userType == UserType.carrier) {

@@ -52,8 +52,7 @@ class ColumnBuilder extends StatelessWidget {
       crossAxisAlignment: crossAxisAlignment,
       textDirection: textDirection,
       verticalDirection: verticalDirection,
-      children: List.generate(itemCount, (index) => itemBuilder(context, index))
-          .toList(),
+      children: List.generate(itemCount, (index) => itemBuilder(context, index)).toList(),
     );
   }
 }

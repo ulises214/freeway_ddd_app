@@ -15,12 +15,7 @@ final List<String> _bottomAppBarIcons = [
   AssetsPaths.icons.bottomAppbarHelp,
   AssetsPaths.icons.user,
 ];
-final List<String> _bottomAppBarLabels = [
-  'Inicio',
-  'Repartidores',
-  'Ayuda',
-  'Perfil'
-];
+final List<String> _bottomAppBarLabels = ['Inicio', 'Repartidores', 'Ayuda', 'Perfil'];
 
 /// The main that display  alist of tabs
 class HomePage extends StatefulWidget {
@@ -111,8 +106,7 @@ class _HomePageState extends State<HomePage> {
       bottom: const HomeFilters(),
       title: isSearching
           ? SearchField(hintText: 'Buscar servicio', onSearch: (text) {})
-          : const StyledText('FreeWay',
-              type: StyledTextType.h6, textColor: Colors.white),
+          : const StyledText('FreeWay', type: StyledTextType.h6, textColor: Colors.white),
       actions: [
         SearchToggler(isSearching: isSearching, onPressed: _toggleSearching),
         const Padding(

@@ -18,9 +18,8 @@ class LoginViewModel {
   Future<void> login(UserData userData) async {
     final req = _requesBuilder.loginRequest(userData);
     try {
-      final result = await _client
-          .request(req)
-          .firstWhere((res) => res.dataSource != DataSource.Optimistic);
+      final result =
+          await _client.request(req).firstWhere((res) => res.dataSource != DataSource.Optimistic);
       if (result.data?.signIn != null) {
         return _router.toHomeFromLogin(result.data!.signIn!.token);
       } else if (result.linkException != null) {

@@ -54,8 +54,7 @@ class RestorePasswordDialog extends StatelessWidget {
           RoundedButton.gradient('Reestablecer contraseña',
               size: RoundedButtonSize.long, onPressed: _handleSubmit),
           const SizedBox(height: 10),
-          RoundedButton.gray('Cancelar',
-              size: RoundedButtonSize.long, onPressed: Get.back),
+          RoundedButton.gray('Cancelar', size: RoundedButtonSize.long, onPressed: Get.back),
         ],
       ),
     );

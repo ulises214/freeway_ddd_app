@@ -18,8 +18,7 @@ enum BinarySelectorValues {
 class BinarySelectorController extends ValueNotifier<BinarySelectorValues?> {
   /// Creates a new controller with [BinarySelectorValues.left]
   /// as default value if [selectedField] isn't provided
-  BinarySelectorController(
-      [BinarySelectorValues? selectedField = BinarySelectorValues.left])
+  BinarySelectorController([BinarySelectorValues? selectedField = BinarySelectorValues.left])
       : super(selectedField);
 
   /// Creates a new controller for [BinarySelector] with null as firs result
@@ -68,11 +67,9 @@ class _BinarySelectorState extends State<BinarySelector> {
     widget.controller.value = value;
   }
 
-  void _selectLeft() =>
-      setState(() => _changeControllerValue(BinarySelectorValues.left));
+  void _selectLeft() => setState(() => _changeControllerValue(BinarySelectorValues.left));
 
-  void _selectRight() =>
-      setState(() => _changeControllerValue(BinarySelectorValues.right));
+  void _selectRight() => setState(() => _changeControllerValue(BinarySelectorValues.right));
 
   @override
   Widget build(BuildContext context) {

@@ -14,9 +14,7 @@ class HighlightedTravel extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16.0),
         child: Row(
-          children: List.generate(3, (e) => HightLightedTravelCard())
-              .toList()
-              .toList(),
+          children: List.generate(3, (e) => HightLightedTravelCard()).toList().toList(),
         ),
       ),
     );

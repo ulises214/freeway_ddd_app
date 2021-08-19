@@ -49,8 +49,7 @@ class BottomAppBarItem extends StatelessWidget {
             StyledText(
               label,
               type: StyledTextType.body1,
-              textColor:
-                  isSelected ? FreeWayTheme.extraBlue1 : FreeWayTheme.gray3,
+              textColor: isSelected ? FreeWayTheme.extraBlue1 : FreeWayTheme.gray3,
             )
         ],
       ),
