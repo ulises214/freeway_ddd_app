@@ -1,3 +1,4 @@
+import 'package:freeway_app/graphq_requests/user/user_requests.dart';
 import 'package:get/get.dart';
 
 import '../../model/enums/enums.dart';
@@ -10,6 +11,7 @@ class SignUpViewModel {
   CarrierData? _carrierData;
   ClientData? _clientData;
   UserData? _userData;
+  final UserRequestsBuilder _requestsBuilder = Get.find();
 
   /// Set the data required for the login
   set userData(UserData userData) => _userData = userData;
@@ -42,8 +44,14 @@ class SignUpViewModel {
         (_carrierData == null && _clientData == null)) {
       throw Exception('Faltan datos webon');
     }
-    // ignore: todo
-    // TODO signup and go to home
-    await Get.offAllNamed('/home');
+    if (userType == UserType.carrier) {
+      await _signUpCarrier();
+    } else {
+      await _signUpBuyer();
+    }
   }
+
+  Future<void> _signUpCarrier() async {}
+
+  Future<void> _signUpBuyer() async {}
 }
