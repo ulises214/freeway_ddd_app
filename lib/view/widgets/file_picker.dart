@@ -1,9 +1,14 @@
+// 🎯 Dart imports:
 import 'dart:io';
 
-import 'package:file_picker/file_picker.dart';
+// 🐦 Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:freeway_app/view/theme.dart';
 
+// 📦 Package imports:
+import 'package:file_picker/file_picker.dart';
+
+// 🌎 Project imports:
+import 'package:freeway_app/view/theme.dart';
 import '../assets_paths.dart';
 import 'rounded_buttons.dart';
 import 'svg_icon.dart';

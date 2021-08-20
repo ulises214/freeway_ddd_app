@@ -1,3 +1,4 @@
+// 🌎 Project imports:
 import 'user_type.dart';
 
 /// The data for a user of type Client

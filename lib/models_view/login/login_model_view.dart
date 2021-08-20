@@ -1,10 +1,12 @@
+// 📦 Package imports:
 import 'package:ferry/ferry.dart';
+import 'package:get/get.dart';
+
+// 🌎 Project imports:
 import 'package:freeway_app/graphq_requests/user/user_requests.dart';
 import 'package:freeway_app/router.dart';
 import 'package:freeway_app/view/pages/login/widgets/restores_password_dialog.dart';
 import 'package:freeway_app/view/widgets/dalogs.dart/dialogs_manager.dart';
-import 'package:get/get.dart';
-
 import '../../../model/user/models.dart';
 
 /// Controller for login page

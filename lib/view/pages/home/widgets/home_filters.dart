@@ -1,6 +1,8 @@
+// 🐦 Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:freeway_app/view/widgets/widgets.dart';
 
+// 🌎 Project imports:
+import 'package:freeway_app/view/widgets/widgets.dart';
 import 'filter_chip.dart';
 
 /// The list of filtes represented in filters chips

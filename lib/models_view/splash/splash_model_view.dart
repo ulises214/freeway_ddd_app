@@ -1,3 +1,4 @@
+// 📦 Package imports:
 import 'package:get/get.dart';
 
 /// Controller for Splash page

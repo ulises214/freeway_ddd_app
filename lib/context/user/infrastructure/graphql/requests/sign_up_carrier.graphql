@@ -1,0 +1,19 @@
+mutation SignUpCarrier(
+  $cellPhone: CellphoneAttributes!
+  $password: String!
+  $carrierData: UserCarrierAttributes!
+) {
+  signUp(
+    input: {
+      cellphone: $cellPhone
+      password: $password
+      userType: "carrier"
+      carrierData: $carrierData
+    }
+  ) {
+    user {
+      uuid
+      type
+    }
+  }
+}

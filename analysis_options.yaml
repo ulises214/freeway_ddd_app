@@ -6,5 +6,7 @@ analyzer:
     - lib/**.gql.g.dart
 linter:
   rules:
-    - close_sinks
-    - one_member_abstracts
+    close_sinks: true
+    one_member_abstracts: true
+    lines_longer_than_80_chars: false
+    lines_longer_than_100_chars: true

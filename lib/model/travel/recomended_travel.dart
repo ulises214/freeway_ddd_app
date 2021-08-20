@@ -1,3 +1,4 @@
+// 🌎 Project imports:
 import 'travel_base.dart';
 
 /// Temporal model class, will replaced with graphql-based models

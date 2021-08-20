@@ -1,6 +1,8 @@
+// 🐦 Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:freeway_app/view/widgets/widgets.dart';
 
+// 🌎 Project imports:
+import 'package:freeway_app/view/widgets/widgets.dart';
 import '../../../theme.dart';
 
 /// Widget displayed as title in signup page

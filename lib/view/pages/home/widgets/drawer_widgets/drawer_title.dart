@@ -1,7 +1,11 @@
+// 🐦 Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:freeway_app/view/widgets/widgets.dart';
+
+// 📦 Package imports:
 import 'package:get/get.dart';
 
+// 🌎 Project imports:
+import 'package:freeway_app/view/widgets/widgets.dart';
 import '../../../../theme.dart';
 
 /// The top widget for a filter drawer

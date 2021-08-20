@@ -1,5 +1,7 @@
+// 🐦 Flutter imports:
 import 'package:flutter/material.dart';
 
+// 🌎 Project imports:
 import 'hightlighted_travel_card.dart';
 
 /// Widget that display a list of hightlighted travels

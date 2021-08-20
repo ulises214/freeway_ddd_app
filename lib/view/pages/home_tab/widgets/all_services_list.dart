@@ -1,9 +1,12 @@
+// 🎯 Dart imports:
 import 'dart:math';
 
+// 🐦 Flutter imports:
 import 'package:flutter/material.dart';
+
+// 🌎 Project imports:
 import 'package:freeway_app/view/widgets/column_builder.dart';
 import 'package:freeway_app/view/widgets/widgets.dart';
-
 import '../../../../model/travel/models.dart';
 import '../../../assets_paths.dart';
 import '../../../theme.dart';

@@ -1,8 +1,12 @@
+// 🐦 Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:freeway_app/view/widgets/dalogs.dart/dialogs_manager.dart';
-import 'package:freeway_app/view/widgets/widgets.dart';
+
+// 📦 Package imports:
 import 'package:get/get.dart';
 
+// 🌎 Project imports:
+import 'package:freeway_app/view/widgets/dalogs.dart/dialogs_manager.dart';
+import 'package:freeway_app/view/widgets/widgets.dart';
 import '../../../../model/enums/enums.dart';
 import '../../../../model/user/models.dart';
 import '../../../../models_view/signup/signup_model_view.dart';

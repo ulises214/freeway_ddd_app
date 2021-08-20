@@ -1,7 +1,11 @@
+// 🐦 Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:freeway_app/view/helpers/validators.dart';
+
+// 📦 Package imports:
 import 'package:get/get.dart';
 
+// 🌎 Project imports:
+import 'package:freeway_app/view/helpers/validators.dart';
 import '../../../../models_view/login/login_model_view.dart';
 import '../../../assets_paths.dart';
 import '../../../theme.dart';

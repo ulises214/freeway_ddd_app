@@ -1,5 +1,7 @@
+// 🐦 Flutter imports:
 import 'package:flutter/material.dart';
 
+// 🌎 Project imports:
 import '../assets_paths.dart';
 import '../theme.dart';
 import 'svg_icon.dart';

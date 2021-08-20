@@ -1,6 +1,8 @@
+// 📦 Package imports:
 import 'package:ferry/ferry.dart';
 import 'package:gql_http_link/gql_http_link.dart';
 
+// 🌎 Project imports:
 import 'utils/log/colored_log.dart';
 
 /// Create/Recreate the graphql client with optional oken

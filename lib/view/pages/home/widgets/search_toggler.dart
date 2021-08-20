@@ -1,6 +1,8 @@
+// 🐦 Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:freeway_app/view/widgets/widgets.dart';
 
+// 🌎 Project imports:
+import 'package:freeway_app/view/widgets/widgets.dart';
 import '../../../assets_paths.dart';
 
 /// ButtonIcon that switch between a search icon and a cancel icon

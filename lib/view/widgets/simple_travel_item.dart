@@ -1,5 +1,7 @@
+// 🐦 Flutter imports:
 import 'package:flutter/material.dart';
 
+// 🌎 Project imports:
 import '../../model/travel/models.dart';
 import '../theme.dart';
 import 'stars_indicator.dart';

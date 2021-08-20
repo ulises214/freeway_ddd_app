@@ -1,16 +1,19 @@
 // ignore_for_file: unnecessary_cast
+
+// 📦 Package imports:
 import 'package:ferry/ferry.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:get/get.dart';
+import 'package:mockito/annotations.dart';
+import 'package:mockito/mockito.dart';
+
+// 🌎 Project imports:
 import 'package:freeway_app/create_graphql_client.dart';
 import 'package:freeway_app/graphq_requests/user/user_requests.dart';
 import 'package:freeway_app/model/user/models.dart';
 import 'package:freeway_app/models_view/login/login_model_view.dart';
 import 'package:freeway_app/router.dart';
 import 'package:freeway_app/view/widgets/dalogs.dart/dialogs_manager.dart';
-import 'package:get/get.dart';
-import 'package:mockito/annotations.dart';
-import 'package:mockito/mockito.dart';
-
 import 'login_model_view_test.mocks.dart';
 
 final _validUserData =

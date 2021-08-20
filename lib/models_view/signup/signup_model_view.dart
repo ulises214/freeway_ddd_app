@@ -1,6 +1,8 @@
-import 'package:freeway_app/graphq_requests/user/user_requests.dart';
+// 📦 Package imports:
 import 'package:get/get.dart';
 
+// 🌎 Project imports:
+import 'package:freeway_app/graphq_requests/user/user_requests.dart';
 import '../../model/enums/enums.dart';
 import '../../model/user/models.dart';
 

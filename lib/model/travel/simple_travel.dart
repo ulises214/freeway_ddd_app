@@ -1,3 +1,4 @@
+// 🌎 Project imports:
 import 'package:freeway_app/model/travel/travel_base.dart';
 
 /// Travel with the count of reviews

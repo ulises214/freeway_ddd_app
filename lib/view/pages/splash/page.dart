@@ -1,5 +1,7 @@
+// 🐦 Flutter imports:
 import 'package:flutter/material.dart';
 
+// 🌎 Project imports:
 import '../../../models_view/splash/splash_model_view.dart';
 import '../../assets_paths.dart';
 import 'widgets/loading.dart';

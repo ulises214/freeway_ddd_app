@@ -1,6 +1,10 @@
+// 🐦 Flutter imports:
 import 'package:flutter/material.dart';
+
+// 📦 Package imports:
 import 'package:get/get.dart';
 
+// 🌎 Project imports:
 import '../../../models_view/login/login_model_view.dart';
 import '../../../models_view/login/state.dart';
 import '../../theme.dart';

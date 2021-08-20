@@ -1,5 +1,7 @@
+// 🐦 Flutter imports:
 import 'package:flutter/material.dart';
 
+// 🌎 Project imports:
 import '../../../../model/enums/enums.dart';
 import '../../../assets_paths.dart';
 import 'user_type.dart';

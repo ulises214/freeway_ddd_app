@@ -1,6 +1,8 @@
+// 📦 Package imports:
 import 'package:ferry/ferry.dart';
 import 'package:get/get.dart';
 
+// 🌎 Project imports:
 import 'create_graphql_client.dart';
 
 /// Routes manager for application

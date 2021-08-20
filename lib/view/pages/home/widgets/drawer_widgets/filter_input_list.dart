@@ -1,5 +1,7 @@
+// 🐦 Flutter imports:
 import 'package:flutter/material.dart';
 
+// 🌎 Project imports:
 import '../../../../theme.dart';
 import 'stars_filter_input.dart';
 import 'string_filter_input.dart';
