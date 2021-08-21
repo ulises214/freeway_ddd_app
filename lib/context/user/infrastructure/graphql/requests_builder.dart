@@ -6,18 +6,6 @@ import 'requests/login.req.gql.dart';
 import 'requests/sign_up_buyer.req.gql.dart';
 import 'requests/sign_up_carrier.req.gql.dart';
 
-export 'requests/login.data.gql.dart';
-export 'requests/login.req.gql.dart';
-export 'requests/login.var.gql.dart';
-
-export 'requests/sign_up_buyer.data.gql.dart';
-export 'requests/sign_up_buyer.req.gql.dart';
-export 'requests/sign_up_buyer.var.gql.dart';
-
-export 'requests/sign_up_carrier.data.gql.dart';
-export 'requests/sign_up_carrier.req.gql.dart';
-export 'requests/sign_up_carrier.var.gql.dart';
-
 /// Create the request to user actions
 class UserRequestsBuilder {
   /// Return the mutation that login a existent user

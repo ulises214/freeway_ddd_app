@@ -7,7 +7,7 @@ abstract class Logger {
   void debug(String message);
 
   /// Error based on a string
-  void erroMessage(String message);
+  void errorMessage(String message);
 
   /// Error based on a [Exception]
   void error(CustomException error);

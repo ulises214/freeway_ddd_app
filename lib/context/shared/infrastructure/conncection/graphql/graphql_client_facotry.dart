@@ -9,40 +9,40 @@ import 'package:freeway_app/context/shared/infrastructure/conncection/graphql/gr
 
 /// The facotry for the clients to connect the application
 class GraphQLClientFactory {
-  static final Map<GraphQLClientContext, Client> _clients = {};
+  final Map<GraphQLClientContext, Client> _clients = {};
 
   /// Creates or return a new client
-  static Client createClient(
+  Client createClient(
     GraphQLClientContext context,
     GraphQLConfig config,
   ) {
     try {
-      return GraphQLClientFactory._getClient(context);
+      return _getClient(context);
     } on GraphQLClientNotRegisteredException {
-      final client = GraphQLClientFactory._createAndConnectClient(context, config);
-      GraphQLClientFactory._registerClient(context, client);
+      final client = _createAndConnectClient(context, config);
+      _registerClient(context, client);
       return client;
     }
   }
 
-  static Client _getClient(GraphQLClientContext context) {
-    final client = GraphQLClientFactory._clients[context];
+  Client _getClient(GraphQLClientContext context) {
+    final client = _clients[context];
     if (client == null) throw GraphQLClientNotRegisteredException();
     return client;
   }
 
   /// Gets the client for unlogged operations
-  static Client getUnloggedClient() => _getClient(GraphQLClientContext.unloggedOperation);
+  Client getUnloggedClient() => _getClient(GraphQLClientContext.unloggedOperation);
 
   /// Gets the client for logged operations
-  static Client getLoggedClient() => _getClient(GraphQLClientContext.loggedOperation);
+  Client getLoggedClient() => _getClient(GraphQLClientContext.loggedOperation);
 
-  static Client _createAndConnectClient(
+  Client _createAndConnectClient(
     GraphQLClientContext context,
     GraphQLConfig config,
   ) {
     final link = HttpLink(
-      'http://192.168.1.69:3000/graphql',
+      config.url,
       defaultHeaders: {
         if (config.authToken != null) 'Authorization': 'Bearer ${config.authToken}',
       },
@@ -51,7 +51,7 @@ class GraphQLClientFactory {
     return client;
   }
 
-  static void _registerClient(GraphQLClientContext context, Client client) {
-    GraphQLClientFactory._clients[context] = client;
+  void _registerClient(GraphQLClientContext context, Client client) {
+    _clients[context] = client;
   }
 }

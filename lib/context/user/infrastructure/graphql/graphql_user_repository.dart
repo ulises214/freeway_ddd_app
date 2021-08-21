@@ -14,14 +14,15 @@ import 'package:freeway_app/context/user/infrastructure/graphql/requests_builder
 /// Implements the [UserRepository] to use graphql
 class GraphQLUserRepository implements UserRepository {
   /// Initialize the request builder and the client factory
-  GraphQLUserRepository() {
+  GraphQLUserRepository(this._clientFactory) {
     _requestsBuilder = UserRequestsBuilder();
   }
+  final GraphQLClientFactory _clientFactory;
   late final UserRequestsBuilder _requestsBuilder;
   @override
   Future<AccessToken> login(UserData userData) async {
     final req = _requestsBuilder.buildLoginRequest(userData);
-    final client = GraphQLClientFactory.getUnloggedClient();
+    final client = _clientFactory.getUnloggedClient();
     final result = await client.request(req).firstWhere(
           (r) => r.dataSource == DataSource.Optimistic,
         );

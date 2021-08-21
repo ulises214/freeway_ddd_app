@@ -4,18 +4,6 @@ import 'graphql/login.req.gql.dart';
 import 'graphql/sign_up_buyer.req.gql.dart';
 import 'graphql/sign_up_carrier.req.gql.dart';
 
-export 'graphql/login.data.gql.dart';
-export 'graphql/login.req.gql.dart';
-export 'graphql/login.var.gql.dart';
-
-export 'graphql/sign_up_buyer.data.gql.dart';
-export 'graphql/sign_up_buyer.req.gql.dart';
-export 'graphql/sign_up_buyer.var.gql.dart';
-
-export 'graphql/sign_up_carrier.data.gql.dart';
-export 'graphql/sign_up_carrier.req.gql.dart';
-export 'graphql/sign_up_carrier.var.gql.dart';
-
 /// Create the request to user actions
 class UserRequestsBuilder {
   /// Return the mutation that login a existent user
