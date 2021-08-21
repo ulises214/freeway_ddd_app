@@ -1,0 +1,6 @@
+#!/bin/zsh
+
+fvm flutter pub run import_sorter:main
+flutter pub run import_sorter:main
+
+dart format --fix -l 100 lib
