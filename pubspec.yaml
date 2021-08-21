@@ -21,6 +21,8 @@ dependencies:
   hive_flutter: ^1.0.0
   uuid: ^3.0.4
   get_it: ^7.2.0
+  font_awesome_flutter:
+    path: ./packages/font_awesome_flutter
 
 dev_dependencies:
   flutter_test:

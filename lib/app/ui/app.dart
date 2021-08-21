@@ -1,5 +1,9 @@
 // 🐦 Flutter imports:
 import 'package:flutter/material.dart';
+import 'package:freeway_app/app/dependency_injection/container.dart';
+import 'package:freeway_app/app/ui/routes.dart';
+import 'package:freeway_app/app/ui/shared/router.dart';
+import 'package:freeway_app/app/ui/shared/theme.dart';
 
 /// The main entry point for the application
 class FreeWayApp extends StatelessWidget {
@@ -8,15 +12,14 @@ class FreeWayApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Material App',
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Material A Bar'),
+      debugShowCheckedModeBanner: false,
+      navigatorKey: DependencyContainer.i.getOrPut(() => AppRouter()).key,
+      theme: FreeWayTheme.theme,
+      title: 'FreeWay',
+      initialRoute: '/splash',
+      routes: <String, Widget Function(BuildContext)>{}..addEntries(
+          RoutesDefinitions.all.map((e) => e.toRouteMap()),
         ),
-        body: const Center(
-          child: Text('Hello World'),
-        ),
-      ),
     );
   }
 }

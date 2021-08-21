@@ -1,7 +1,5 @@
-// 📦 Package imports:
-import 'package:get_it/get_it.dart';
-
 // 🌎 Project imports:
+import 'package:freeway_app/app/dependency_injection/container.dart';
 import 'package:freeway_app/context/shared/domain/env.dart';
 import 'package:freeway_app/context/shared/domain/query_bus.dart';
 import 'package:freeway_app/context/shared/domain/query_handler.dart';
@@ -16,15 +14,14 @@ import 'package:freeway_app/context/user/domain/user_repository.dart';
 import 'package:freeway_app/context/user/infrastructure/graphql/graphql_user_repository.dart';
 import 'package:freeway_app/context/user/infrastructure/inmemory/in_memory_user_repository.dart';
 
-UserRepository _getRepository() => GetIt.I.get<UserRepository>();
-void _registerHandler<T extends QueryHandler>(T queryH) => GetIt.I.get<QueryBus>().add(queryH);
+UserRepository _getRepository() => DependencyContainer.i.get<UserRepository>();
+void _registerHandler<T extends QueryHandler>(T queryH) =>
+    DependencyContainer.i.get<QueryBus>().add(queryH);
 
 /// Inject the dependencies relationed withe the users
 void inject(Environment env) {
   switch (env) {
     case Environment.devFront:
-      _injectInMemory();
-      break;
     case Environment.testFront:
       _injectInMemory();
       break;
@@ -39,13 +36,13 @@ void inject(Environment env) {
 }
 
 void _injectInMemory() {
-  GetIt.I.registerLazySingleton<UserRepository>(() => InMemoryUserRepository());
+  DependencyContainer.i.put<UserRepository>(() => InMemoryUserRepository());
 }
 
 void _injectGraphQL() {
-  GetIt.I
+  DependencyContainer.i
     //? Client
-    ..registerLazySingleton<GraphQLClientFactory>(() {
+    ..put<GraphQLClientFactory>(() {
       final clientFactory = GraphQLClientFactory()
         ..createClient(
           GraphQLClientContext.unloggedOperation,
@@ -54,32 +51,32 @@ void _injectGraphQL() {
       return clientFactory;
     })
     //? Repository
-    ..registerLazySingleton<UserRepository>(() {
-      final clientFacotry = GetIt.I.get<GraphQLClientFactory>();
+    ..put<UserRepository>(() {
+      final clientFacotry = DependencyContainer.i.get<GraphQLClientFactory>();
       return GraphQLUserRepository(clientFacotry);
     });
 }
 
 void _injectRunners() {
-  GetIt.I
-    ..registerLazySingleton<LoginUserRunner>(() => LoginUserRunner(_getRepository()))
-    ..registerLazySingleton<RestoreUserPasswordRunner>(
+  DependencyContainer.i
+    ..put<LoginUserRunner>(() => LoginUserRunner(_getRepository()))
+    ..put<RestoreUserPasswordRunner>(
       () => RestoreUserPasswordRunner(_getRepository()),
     );
 }
 
 void _injectQueryHandlers() {
-  GetIt.I
-    ..registerLazySingleton<LoginUserQueryHandler>(() {
+  DependencyContainer.i
+    ..put<LoginUserQueryHandler>(() {
       final queryHandler = LoginUserQueryHandler(
-        GetIt.I.get<LoginUserRunner>(),
+        DependencyContainer.i.get<LoginUserRunner>(),
       );
       _registerHandler(queryHandler);
       return queryHandler;
     })
-    ..registerLazySingleton<RestoreUserPasswordQueryHandler>(() {
+    ..put<RestoreUserPasswordQueryHandler>(() {
       final queryHandler = RestoreUserPasswordQueryHandler(
-        GetIt.I.get<RestoreUserPasswordRunner>(),
+        DependencyContainer.i.get<RestoreUserPasswordRunner>(),
       );
       _registerHandler(queryHandler);
       return queryHandler;
