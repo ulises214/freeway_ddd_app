@@ -11,17 +11,21 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_svg: ^0.22.0
-  cupertino_icons: ^1.0.2
-  file_picker: ^3.0.2
+  # Graphql
   ferry: ^0.10.3
   gql_http_link: ^0.4.0
   ferry_hive_store: ^0.4.3
   hive_flutter: ^1.0.0
-  uuid: ^3.0.4
-  get_it: ^7.2.0
+  # Ui utilities
+  flutter_svg: ^0.22.0
+  cupertino_icons: ^1.0.2
+  file_picker: ^3.0.2
   font_awesome_flutter:
     path: ../font_awesome_flutter/
+  # Extra
+  uuid: ^3.0.4
+  get_it: ^7.2.0
+  fzregex: ^2.0.0
 
 dev_dependencies:
   flutter_test:

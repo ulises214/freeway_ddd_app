@@ -17,7 +17,7 @@ class FreeWayApp extends StatelessWidget {
       theme: FreeWayTheme.theme,
       title: 'FreeWay',
       initialRoute: '/splash',
-      routes: <String, Widget Function(BuildContext)>{}..addEntries(
+      routes: <String, WidgetBuilder>{}..addEntries(
           RoutesDefinitions.all.map((e) => e.toRouteMap()),
         ),
     );

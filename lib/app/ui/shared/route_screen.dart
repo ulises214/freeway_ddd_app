@@ -9,10 +9,10 @@ class RouteScreen {
   final String route;
 
   /// The widget ot render
-  final Widget Function(BuildContext context) screen;
+  final WidgetBuilder screen;
 
   ///Export map to use in mateiral app
-  MapEntry<String, Widget Function(BuildContext context)> toRouteMap() {
+  MapEntry<String, WidgetBuilder> toRouteMap() {
     return MapEntry(route, screen);
   }
 }
