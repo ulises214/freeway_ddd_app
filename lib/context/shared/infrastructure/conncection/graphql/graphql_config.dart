@@ -1,3 +1,5 @@
+import 'package:freeway_app/context/shared/domain/access_token.dart';
+
 /// Gets the configuration for the connection to a grapqhl client
 class GraphQLConfig {
   /// Initialize the atribbutes for the connection
@@ -7,5 +9,5 @@ class GraphQLConfig {
   final String url;
 
   /// If exits, the bearer auth token
-  final String? authToken;
+  final AccessToken? authToken;
 }

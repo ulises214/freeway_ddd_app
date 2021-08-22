@@ -3,9 +3,7 @@ import 'package:freeway_app/app/dependency_injection/container.dart';
 import 'package:freeway_app/context/shared/domain/env.dart';
 import 'package:freeway_app/context/shared/domain/query_bus.dart';
 import 'package:freeway_app/context/shared/domain/query_handler.dart';
-import 'package:freeway_app/context/shared/infrastructure/conncection/graphql/graphql_client_context.dart';
 import 'package:freeway_app/context/shared/infrastructure/conncection/graphql/graphql_client_facotry.dart';
-import 'package:freeway_app/context/shared/infrastructure/conncection/graphql/graphql_config.dart';
 import 'package:freeway_app/context/user/application/login/login_user_query_handler.dart';
 import 'package:freeway_app/context/user/application/login/login_user_runner.dart';
 import 'package:freeway_app/context/user/application/restore_password/restore_user_password_query_handler.dart';
@@ -43,14 +41,7 @@ void _injectInMemory() {
 void _injectGraphQL() {
   DependencyContainer.i
     //? Client
-    ..put<GraphQLClientFactory>(() {
-      final clientFactory = GraphQLClientFactory()
-        ..createClient(
-          GraphQLClientContext.unloggedOperation,
-          GraphQLConfig('http://192.168.1.69:3000/graphql'),
-        );
-      return clientFactory;
-    })
+    ..put<GraphQLClientFactory>(() => GraphQLClientFactory('http://192.168.1.69:3000/graphql'))
     //? Repository
     ..put<UserRepository>(() {
       final clientFacotry = DependencyContainer.i.get<GraphQLClientFactory>();

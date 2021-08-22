@@ -1,5 +1,6 @@
 // 📦 Package imports:
 import 'package:ferry/ferry.dart';
+import 'package:freeway_app/context/shared/domain/access_token.dart';
 import 'package:gql_http_link/gql_http_link.dart';
 
 // 🌎 Project imports:
@@ -9,13 +10,14 @@ import 'package:freeway_app/context/shared/infrastructure/conncection/graphql/gr
 
 /// The facotry for the clients to connect the application
 class GraphQLClientFactory {
+  /// Initialize the endpoint for the connections
+  GraphQLClientFactory(this._endpoint);
   final Map<GraphQLClientContext, Client> _clients = {};
 
-  /// Creates or return a new client
-  Client createClient(
-    GraphQLClientContext context,
-    GraphQLConfig config,
-  ) {
+  final String _endpoint;
+  AccessToken? _authToken;
+
+  Client _createClient(GraphQLClientContext context, GraphQLConfig config) {
     try {
       return _getClient(context);
     } on GraphQLClientNotRegisteredException {
@@ -31,11 +33,20 @@ class GraphQLClientFactory {
     return client;
   }
 
+  /// Change the autorization token
+  set autToken(AccessToken token) => _authToken = token;
+
   /// Gets the client for unlogged operations
-  Client getUnloggedClient() => _getClient(GraphQLClientContext.unloggedOperation);
+  Client getUnloggedClient() => _createClient(
+        GraphQLClientContext.unloggedOperation,
+        GraphQLConfig(_endpoint),
+      );
 
   /// Gets the client for logged operations
-  Client getLoggedClient() => _getClient(GraphQLClientContext.loggedOperation);
+  Client getLoggedClient() => _createClient(
+        GraphQLClientContext.loggedOperation,
+        GraphQLConfig(_endpoint, _authToken),
+      );
 
   Client _createAndConnectClient(
     GraphQLClientContext context,
@@ -44,7 +55,7 @@ class GraphQLClientFactory {
     final link = HttpLink(
       config.url,
       defaultHeaders: {
-        if (config.authToken != null) 'Authorization': 'Bearer ${config.authToken}',
+        if (config.authToken != null) 'Authorization': 'Bearer ${config.authToken!.value}',
       },
     );
     final client = Client(link: link);
