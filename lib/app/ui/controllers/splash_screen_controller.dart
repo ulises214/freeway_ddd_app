@@ -11,6 +11,7 @@ class SplashScreenController {
     // * Request user data and verify if is login in device
     // * Await to smoot transition
     await Future.delayed(const Duration(seconds: 10));
-    // _router.offAll(RoutesDefinitions.login);
+    return;
+    _router.offAll(RoutesDefinitions.login);
   }
 }

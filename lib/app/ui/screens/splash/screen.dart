@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:freeway_app/app/dependency_injection/container.dart';
 import 'package:freeway_app/app/ui/controllers/splash_screen_controller.dart';
 import 'package:freeway_app/app/ui/shared/assets_paths.dart';
-import 'package:freeway_app/app/ui/shared/route_screen.dart';
 import 'package:freeway_app/app/ui/widgets/molecules/loading_indicator.dart';
 import 'package:freeway_app/app/ui/widgets/molecules/splash_title.dart';
 
@@ -26,24 +25,30 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        width: double.infinity,
-        height: double.infinity,
-        decoration: BoxDecoration(
-          image: DecorationImage(
-              image: AssetImage(
-                AssetsPaths.images.splashScreenBackground,
-              ),
-              fit: BoxFit.cover),
-        ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: const [
-            SplashTitle(),
-            LoadingIndicator(),
-          ],
-        ),
+      body: Stack(
+        fit: StackFit.expand,
+        children: [
+          Image.asset(AssetsPaths.images.splashScreenBackground, fit: BoxFit.cover),
+          Center(
+            child: ConstrainedBox(
+              constraints: const BoxConstraints(minHeight: 400, maxHeight: 500),
+              child: const _Body(),
+            ),
+          ),
+        ],
       ),
+    );
+  }
+}
+
+class _Body extends StatelessWidget {
+  const _Body({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: const [SplashTitle(), LoadingIndicator()],
     );
   }
 }

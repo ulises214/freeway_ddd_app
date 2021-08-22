@@ -26,6 +26,7 @@ void inject(Environment env) {
       _injectInMemory();
       break;
     case Environment.devFrontConnected:
+    case Environment.e2e:
       _injectGraphQL();
       break;
   }
