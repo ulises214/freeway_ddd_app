@@ -12,4 +12,9 @@ class AppRouter {
   void offAll(RouteScreen screen) {
     key.currentState?.pushNamedAndRemoveUntil(screen.route, (route) => false);
   }
+
+  /// Go to a new Screen
+  void off(RouteScreen screen) {
+    key.currentState?.pushNamed(screen.route);
+  }
 }

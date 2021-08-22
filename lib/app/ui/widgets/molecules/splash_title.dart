@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:freeway_app/app/ui/shared/assets_paths.dart';
 import 'package:freeway_app/app/ui/shared/theme.dart';
-import 'package:freeway_app/app/ui/widgets/atoms/texts.dart';
+import 'package:freeway_app/app/ui/widgets/atoms/styled_text.dart';
 
 /// The title with logo displayed in splash screen
 class SplashTitle extends StatelessWidget {
@@ -17,9 +17,9 @@ class SplashTitle extends StatelessWidget {
       children: [
         SvgPicture.asset(AssetsPaths.logos.verticalSvg, width: 180.0),
         const SizedBox(height: 15),
-        StyledText.h6(
+        const StyledText(
           'Easy logistic transport for every one',
-          textProperties: TextProperites(italic: true),
+          textProperties: TextProperties(italic: true, type: TextType.h6),
         ),
         const SizedBox(height: 15),
         Container(

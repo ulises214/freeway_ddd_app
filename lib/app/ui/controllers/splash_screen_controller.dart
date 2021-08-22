@@ -10,8 +10,7 @@ class SplashScreenController {
   Future<void> requestUserInfo() async {
     // * Request user data and verify if is login in device
     // * Await to smoot transition
-    await Future.delayed(const Duration(seconds: 10));
-    return;
+    await Future.delayed(const Duration(seconds: 2));
     _router.offAll(RoutesDefinitions.login);
   }
 }

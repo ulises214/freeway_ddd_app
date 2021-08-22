@@ -1,7 +1,7 @@
 // 🐦 Flutter imports:
 import 'package:flutter/material.dart';
 import 'package:freeway_app/app/ui/widgets/atoms/circular_loading.dart';
-import 'package:freeway_app/app/ui/widgets/atoms/texts.dart';
+import 'package:freeway_app/app/ui/widgets/atoms/styled_text.dart';
 
 /// A simple load indicator
 class LoadingIndicator extends StatelessWidget {
@@ -10,7 +10,7 @@ class LoadingIndicator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: [const CircularLoading(), StyledText.body1('Cargando')],
+      children: const [CircularLoading(), StyledText('Cargando')],
     );
   }
 }

@@ -27,6 +27,9 @@ abstract class FreeWayTheme {
   /// Common black
   static const black = Color.fromRGBO(0x37, 0x47, 0x4F, 1);
 
+  /// Common white
+  static const white = Colors.white;
+
   /// Common gray
   static const gray1 = Color.fromRGBO(0xCF, 0xD8, 0xDC, 1);
 
