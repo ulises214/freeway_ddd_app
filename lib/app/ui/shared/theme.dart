@@ -78,10 +78,19 @@ abstract class FreeWayTheme {
     final baseTextTheme = lightTheme.textTheme;
     final textTheme = baseTextTheme
         .copyWith(
-          bodyText1: baseTextTheme.bodyText1!.copyWith(fontWeight: FontWeight.w400),
-          bodyText2: baseTextTheme.bodyText2!.copyWith(
-            fontSize: 18,
-          ),
+          headline1: baseTextTheme.headline1!.copyWith(fontSize: 96, fontWeight: FontWeight.w300),
+          headline2: baseTextTheme.headline2!.copyWith(fontSize: 60, fontWeight: FontWeight.w300),
+          headline3: baseTextTheme.headline3!.copyWith(fontSize: 48, fontWeight: FontWeight.w400),
+          headline4: baseTextTheme.headline4!.copyWith(fontSize: 34, fontWeight: FontWeight.w400),
+          headline5: baseTextTheme.headline5!.copyWith(fontSize: 24, fontWeight: FontWeight.w400),
+          headline6: baseTextTheme.headline6!.copyWith(fontSize: 20, fontWeight: FontWeight.w500),
+          subtitle1: baseTextTheme.subtitle1!.copyWith(fontSize: 16, fontWeight: FontWeight.w400),
+          subtitle2: baseTextTheme.subtitle2!.copyWith(fontSize: 14, fontWeight: FontWeight.w500),
+          bodyText1: baseTextTheme.bodyText1!.copyWith(fontSize: 16, fontWeight: FontWeight.w400),
+          bodyText2: baseTextTheme.bodyText2!.copyWith(fontSize: 14, fontWeight: FontWeight.w400),
+          button: baseTextTheme.button!.copyWith(fontSize: 14, fontWeight: FontWeight.w500),
+          caption: baseTextTheme.caption!.copyWith(fontSize: 12, fontWeight: FontWeight.w400),
+          overline: baseTextTheme.overline!.copyWith(fontSize: 10, fontWeight: FontWeight.w400),
         )
         .apply(fontFamily: 'Rubik');
     return lightTheme.copyWith(

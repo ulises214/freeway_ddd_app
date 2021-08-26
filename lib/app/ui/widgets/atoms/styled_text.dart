@@ -11,6 +11,12 @@ enum TextType {
 
   /// Body 2
   body2,
+
+  /// Caption
+  caption,
+
+  /// Button
+  button,
 }
 
 /// Define common properites for text constructors
@@ -20,7 +26,7 @@ class TextProperties {
     this.bold,
     this.italic,
     this.color,
-    this.type = TextType.body1,
+    this.type,
   });
 
   /// If the text is bold
@@ -33,7 +39,7 @@ class TextProperties {
   final Color? color;
 
   /// Define the base style for the text
-  final TextType type;
+  final TextType? type;
 
   /// Makes a copy of all properties
   TextProperties copyWith({
@@ -54,18 +60,24 @@ class TextProperties {
 /// A text with predefined styles based on the theme
 class StyledText extends StatelessWidget {
   /// A text with predefined styles based on the theme
-  const StyledText(this.text, {Key? key, this.textProperties}) : super(key: key);
+  const StyledText(this.text, {Key? key, this.textProperties = const TextProperties()})
+      : super(key: key);
 
   TextStyle? _getStyleByType() {
-    if (textProperties == null) return FreeWayTheme.theme.textTheme.bodyText1;
     final textTheme = FreeWayTheme.theme.textTheme;
-    switch (textProperties!.type) {
+    switch (textProperties.type) {
+      case null:
+        return textTheme.bodyText1;
       case TextType.h6:
         return textTheme.headline6;
       case TextType.body1:
         return textTheme.bodyText1;
       case TextType.body2:
         return textTheme.bodyText2;
+      case TextType.caption:
+        return textTheme.caption;
+      case TextType.button:
+        return textTheme.button;
     }
   }
 
@@ -73,15 +85,15 @@ class StyledText extends StatelessWidget {
   final String text;
 
   /// Optional modifiers for text
-  final TextProperties? textProperties;
+  final TextProperties textProperties;
   @override
   Widget build(BuildContext context) {
     return Text(
       text,
       style: _getStyleByType()?.copyWith(
-        fontWeight: textProperties?.bold == true ? FontWeight.bold : null,
-        fontStyle: textProperties?.italic == true ? FontStyle.italic : null,
-        color: textProperties?.color,
+        fontWeight: textProperties.bold == true ? FontWeight.bold : null,
+        fontStyle: textProperties.italic == true ? FontStyle.italic : null,
+        color: textProperties.color,
       ),
     );
   }

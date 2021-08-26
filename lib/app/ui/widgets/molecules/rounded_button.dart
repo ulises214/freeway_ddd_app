@@ -136,7 +136,7 @@ class RoundedButton extends StatelessWidget {
               if (icon != null) const SizedBox(width: 5.0),
               StyledText(
                 text,
-                textProperties: TextProperties(color: textColor),
+                textProperties: TextProperties(color: textColor, type: TextType.button),
               ),
             ],
           ),

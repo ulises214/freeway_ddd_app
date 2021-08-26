@@ -35,9 +35,13 @@ class TextLink extends StatelessWidget {
           child: StyledText(
             text,
             textProperties: textProperties != null
-                ? textProperties!.copyWith(color: textColor)
+                ? textProperties!.copyWith(
+                    color: textColor,
+                    type: textProperties!.type ?? TextType.button,
+                  )
                 : TextProperties(
                     color: textColor,
+                    type: TextType.button,
                   ),
           ),
         ),
