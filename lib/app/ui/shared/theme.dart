@@ -54,7 +54,10 @@ abstract class FreeWayTheme {
   /// Red danger
   static const danger = Color.fromRGBO(0xEF, 0x53, 0x50, 1);
 
-  /// Gradients
+  ///
+  static final borderRadius = BorderRadius.circular(24.0);
+
+  // ? Gradients
   /// Gradient used in pages background
   static const Gradient verticalGradient = LinearGradient(
     end: Alignment.topCenter,

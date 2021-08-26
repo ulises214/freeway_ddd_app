@@ -48,6 +48,9 @@ flutter:
     - assets/images/
     - assets/icons/
   fonts:
+    - family: PasswordDots
+      fonts:
+        - asset: assets/fonts/password_dots/password_dots.ttf
     - family: Rubik
       fonts:
         - asset: assets/fonts/rubik/900.ttf

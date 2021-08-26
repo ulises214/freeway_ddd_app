@@ -8,7 +8,9 @@ import 'package:freeway_app/context/user/domain/user_repository.dart';
 class InMemoryUserRepository implements UserRepository {
   @override
   Future<AccessToken> login(UserData userData) {
-    return Future.value(AccessToken('False token'));
+    return Future.value(AccessToken(
+      'False token: Phone:[${userData.phoneNumber.value}] Password:[${userData.password.value}]',
+    ));
   }
 
   @override
