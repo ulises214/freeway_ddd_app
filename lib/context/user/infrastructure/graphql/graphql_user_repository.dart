@@ -26,7 +26,7 @@ class GraphQLUserRepository implements UserRepository {
     final client = _clientFactory.getUnloggedClient();
     final result =
         await client.request(req).firstWhere((r) => r.dataSource == DataSource.Optimistic);
-    if (result.data?.signIn?.token == null) throw InvalidCredentialsException('User not found');
+    if (result.data?.signIn?.token == null) throw const AuthException.invalidCredentialsException();
     if (result.linkException != null) throw ConnectionException(result.linkException.toString());
     if (result.hasErrors) throw CustomException(result.graphqlErrors!.first.message);
     final token = AccessToken(result.data!.signIn!.token);

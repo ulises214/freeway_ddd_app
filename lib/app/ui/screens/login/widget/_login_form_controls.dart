@@ -56,10 +56,10 @@ class _PasswordInput extends StatelessWidget {
         ),
       ),
       controller: _passwordControllerFieldController,
-      validator: TextFromValidator('La contraseña debe contener al menos 8 caracteres', (v) {
-        if (v == null) throw InvalidArgumentException();
-        return ValidPassword(v);
-      }),
+      validator: TextFromValidator(
+        'La contraseña debe contener al menos 8 caracteres',
+        (v) => ValidPassword(v),
+      ),
     );
   }
 }
@@ -86,10 +86,7 @@ class _PhoneInput extends StatelessWidget {
       ),
       label: 'Tú numero de teléfono',
       controller: _phoneFieldController,
-      validator: TextFromValidator('Número teléfonico no válido', (v) {
-        if (v == null) throw InvalidArgumentException();
-        return PhoneNumber(v);
-      }),
+      validator: TextFromValidator('Número teléfonico no válido', (v) => PhoneNumber(v)),
     );
   }
 }

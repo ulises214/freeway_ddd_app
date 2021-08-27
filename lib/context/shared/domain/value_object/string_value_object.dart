@@ -1,12 +1,18 @@
+import 'package:freeway_app/context/shared/domain/exceptions/invalid_argument_exception.dart';
+part '_required_string_value_object.dart';
+
 /// A simplified version of string
 abstract class StringValueObject {
   /// Initialize the value
-  StringValueObject(this.value);
+  StringValueObject(this._value);
 
   /// The value contained in the class
-  final String value;
+  final String? _value;
+
+  /// Get the value container in the class
+  String? get value => _value;
 
   /// Obverrides the defualt toString
   @override
-  String toString() => value;
+  String toString() => _value.toString();
 }

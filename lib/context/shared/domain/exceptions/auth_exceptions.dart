@@ -20,7 +20,7 @@ abstract class AuthException extends CustomException {
   /// Occurs when the application has an error
   const factory AuthException.internalError() = InternalError;
 
-  /// When the user hasn't a valid Phone and Password
+  /// When passowrd or phone nomber isn't corrent in login
   const factory AuthException.invalidCredentialsException() = InvalidCredentialsException;
 }
 
@@ -54,7 +54,7 @@ class InternalError extends AuthException {
   const InternalError([String? cause = 'Error in the application']) : super(cause);
 }
 
-/// When the user hasn't a valid Phone and Password
+/// When passowrd or phone nomber isn't corrent in login
 class InvalidCredentialsException extends AuthException {
   /// When the user hasn't a valid Phone and Password
   const InvalidCredentialsException([String? cause]) : super(cause);

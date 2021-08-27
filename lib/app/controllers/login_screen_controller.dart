@@ -29,16 +29,11 @@ class LoginScreenController {
   }
 
   void _manageAuthExceptions(AuthException e) {
-    if (e is PhoneNumberAlreadyInUse) {
-      _dialogManager.showErrorDialog(message: 'El numero telefonico ya está en uso');
-    } else if (e is ServerError) {
+    if (e is ServerError) {
       _dialogManager.showErrorDialog(message: 'Ha ocurrido un error, intentelo de nuevo más tarde');
-    } else if (e is InvalidEmailOrPassword) {
-      _dialogManager.showErrorDialog(
-          message: 'El número teléfonico o la contraseña no son validos');
     } else if (e is InvalidCredentialsException) {
       _dialogManager.showErrorDialog(
-          message: 'El número teléfonico o la contraseña no son validos');
+          message: 'El número teléfonico o la contraseña no son válidos');
     }
   }
 

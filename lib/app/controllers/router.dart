@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/material.dart' as materialDialog show showDialog;
+import 'package:flutter/material.dart' as material_dialog show showDialog;
 
 import 'package:freeway_app/app/ui/shared/route_screen.dart';
 
@@ -23,7 +23,7 @@ class AppRouter {
   /// Show a [Widget] as dialog
   void showDialog(Widget dialog) {
     if (key.currentContext != null) {
-      materialDialog.showDialog(context: key.currentContext!, builder: (_) => dialog);
+      material_dialog.showDialog(context: key.currentContext!, builder: (_) => dialog);
     }
   }
 }
