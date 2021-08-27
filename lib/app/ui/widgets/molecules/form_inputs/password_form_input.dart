@@ -49,7 +49,7 @@ class _StyledPasswordFormInputState extends State<StyledPasswordFormInput> {
             onTap: () => setState(() => _isPasswordHidden = !_isPasswordHidden),
             child: InputIcon(
               _isPasswordHidden ? FontAwesomeIcons.eye : FontAwesomeIcons.eyeSlash,
-              color: FreeWayTheme.gray4,
+              color: FreeWayColors.gray4,
             ),
           ),
         ),

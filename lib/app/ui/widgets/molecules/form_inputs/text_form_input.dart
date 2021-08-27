@@ -7,9 +7,9 @@ OutlineInputBorder _borderWithColor(Color color) => OutlineInputBorder(
       borderRadius: BorderRadius.circular(8),
       borderSide: BorderSide(width: 1, color: color),
     );
-final _border = _borderWithColor(FreeWayTheme.gray4);
-final _errorBorder = _borderWithColor(FreeWayTheme.danger);
-final _focusedBorder = _borderWithColor(FreeWayTheme.officialBlue1);
+final _border = _borderWithColor(FreeWayColors.gray4);
+final _errorBorder = _borderWithColor(FreeWayColors.danger);
+final _focusedBorder = _borderWithColor(FreeWayColors.officialBlue1);
 
 /// Generic and styled input form
 class StyledTextFormInput extends StatelessWidget {
@@ -60,21 +60,21 @@ class StyledTextFormInput extends StatelessWidget {
       keyboardType: keyboardType,
       obscureText: hiddeText,
       validator: validator?.validate,
-      style: Theme.of(context).textTheme.bodyText1!.copyWith(color: FreeWayTheme.black),
+      style: FreeWayTheme.theme.textTheme.bodyText1!.copyWith(color: FreeWayColors.black),
       decoration: InputDecoration(
         enabledBorder: _border,
         focusedBorder: _focusedBorder,
         errorBorder: _errorBorder,
         focusedErrorBorder: _errorBorder,
         errorStyle: const TextStyle(
-          color: FreeWayTheme.danger,
+          color: FreeWayColors.danger,
         ),
         labelText: label,
         floatingLabelBehavior: FloatingLabelBehavior.auto,
         prefixIcon: prefixIcon,
-        prefixStyle: const TextStyle(color: FreeWayTheme.gray4),
+        prefixStyle: const TextStyle(color: FreeWayColors.gray4),
         suffixIcon: sufixIcon,
-        labelStyle: Theme.of(context).textTheme.bodyText1!.copyWith(color: FreeWayTheme.gray4),
+        labelStyle: Theme.of(context).textTheme.bodyText1!.copyWith(color: FreeWayColors.gray4),
       ),
     );
   }

@@ -89,10 +89,10 @@ class RoundedButton extends StatelessWidget {
         icon: icon,
         onPressed: onPressed,
         backgroundColor: Colors.white,
-        textColor: FreeWayTheme.extraBlue1);
+        textColor: FreeWayColors.extraBlue1);
   }
 
-  /// Creates an rounded button with [FreeWayTheme.gray1]
+  /// Creates an rounded button with [FreeWayColors.gray1]
   /// as color backround
   ///
   /// If [size] isn't provided it will take the minimum width with more paddings
@@ -106,8 +106,8 @@ class RoundedButton extends StatelessWidget {
         size: size,
         onPressed: onPressed,
         icon: icon,
-        backgroundColor: FreeWayTheme.gray1,
-        textColor: FreeWayTheme.black);
+        backgroundColor: FreeWayColors.gray1,
+        textColor: FreeWayColors.black);
   }
 
   @override

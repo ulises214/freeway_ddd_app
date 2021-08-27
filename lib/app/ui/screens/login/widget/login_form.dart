@@ -48,7 +48,7 @@ class LoginForm extends StatelessWidget {
             textProperties: TextProperties(
               type: TextType.h4,
               bold: true,
-              color: FreeWayTheme.officialBlue1,
+              color: FreeWayColors.officialBlue1,
             ),
           ),
           const SizedBox(height: 30.0),

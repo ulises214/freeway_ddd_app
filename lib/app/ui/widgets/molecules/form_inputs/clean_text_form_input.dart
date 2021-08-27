@@ -6,9 +6,9 @@ import 'package:freeway_app/app/ui/shared/theme.dart';
 InputBorder _borderWithColor(Color color) => UnderlineInputBorder(
       borderSide: BorderSide(width: 1, color: color),
     );
-final _border = _borderWithColor(FreeWayTheme.gray4);
-final _errorBorder = _borderWithColor(FreeWayTheme.danger);
-final _focusedBorder = _borderWithColor(FreeWayTheme.officialBlue1);
+final _border = _borderWithColor(FreeWayColors.gray4);
+final _errorBorder = _borderWithColor(FreeWayColors.danger);
+final _focusedBorder = _borderWithColor(FreeWayColors.officialBlue1);
 
 /// Generic and styled input form
 class CleanTextFormInput extends StatelessWidget {
@@ -64,7 +64,7 @@ class CleanTextFormInput extends StatelessWidget {
           keyboardType: keyboardType,
           obscureText: hiddeText,
           validator: validator?.validate,
-          style: FreeWayTheme.theme.textTheme.bodyText2?.copyWith(color: FreeWayTheme.black),
+          style: FreeWayTheme.theme.textTheme.bodyText2?.copyWith(color: FreeWayColors.black),
           decoration: InputDecoration(
             enabledBorder: _border,
             focusedBorder: _focusedBorder,
@@ -73,8 +73,8 @@ class CleanTextFormInput extends StatelessWidget {
             floatingLabelBehavior: FloatingLabelBehavior.never,
             labelText: label,
             suffixIcon: sufixIcon,
-            errorStyle: FreeWayTheme.theme.textTheme.caption?.copyWith(color: FreeWayTheme.danger),
-            labelStyle: FreeWayTheme.theme.textTheme.caption?.copyWith(color: FreeWayTheme.gray4),
+            errorStyle: FreeWayTheme.theme.textTheme.caption?.copyWith(color: FreeWayColors.danger),
+            labelStyle: FreeWayTheme.theme.textTheme.caption?.copyWith(color: FreeWayColors.gray4),
           ),
         ),
       ],

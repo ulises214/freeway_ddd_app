@@ -25,7 +25,7 @@ class SplashTitle extends StatelessWidget {
         Container(
           width: 140,
           height: 2,
-          color: FreeWayTheme.officialBlue2,
+          color: FreeWayColors.officialBlue2,
         ),
       ],
     );

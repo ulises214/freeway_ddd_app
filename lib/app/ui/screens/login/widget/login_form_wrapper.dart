@@ -21,7 +21,7 @@ class LoginFormWrapper extends StatelessWidget {
             width: double.infinity,
             height: double.infinity,
             decoration: const BoxDecoration(
-              color: FreeWayTheme.white,
+              color: FreeWayColors.white,
               borderRadius: BorderRadius.vertical(
                 top: Radius.circular(FreeWayTheme.borderRadiusSize),
               ),

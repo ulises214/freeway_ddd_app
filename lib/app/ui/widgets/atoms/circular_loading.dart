@@ -8,7 +8,7 @@ class CircularLoading extends StatelessWidget {
   /// [Colors.transparent] as background
   const CircularLoading({
     Key? key,
-    this.color = FreeWayTheme.officialBlue2,
+    this.color = FreeWayColors.officialBlue2,
   }) : super(key: key);
 
   /// The main color

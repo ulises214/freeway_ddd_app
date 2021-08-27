@@ -25,7 +25,7 @@ class TextLink extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final textColor = onPressed != null ? textProperties?.color : FreeWayTheme.gray3;
+    final textColor = onPressed != null ? textProperties?.color : FreeWayColors.gray3;
     return Material(
       type: MaterialType.transparency,
       child: InkWell(

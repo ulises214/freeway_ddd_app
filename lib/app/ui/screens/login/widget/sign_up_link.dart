@@ -24,14 +24,14 @@ class SignUpLink extends StatelessWidget {
       children: [
         const StyledText(
           '¿No tienes una cuenta?',
-          textProperties: TextProperties(type: TextType.button, color: FreeWayTheme.extraBlue2),
+          textProperties: TextProperties(type: TextType.button, color: FreeWayColors.extraBlue2),
         ),
         TextLink(
           'Regístrate',
           onPressed: onPressed,
           textProperties: const TextProperties(
             type: TextType.button,
-            color: FreeWayTheme.extraBlue2,
+            color: FreeWayColors.extraBlue2,
             bold: true,
           ),
         ),

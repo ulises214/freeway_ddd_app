@@ -15,7 +15,7 @@ class ElevatedLogo extends StatelessWidget {
     return Material(
       elevation: 3,
       borderRadius: FreeWayTheme.borderRadius,
-      color: FreeWayTheme.white,
+      color: FreeWayColors.white,
       child: Padding(
         padding: const EdgeInsets.all(24.0),
         child: SvgPicture.asset(AssetsPaths.logos.verticalSvg, height: 100),

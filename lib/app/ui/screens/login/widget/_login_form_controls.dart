@@ -28,7 +28,7 @@ class _ForgottenPassword extends StatelessWidget {
         TextLink(
           '¿Contraseña olvidada?',
           onPressed: showRestorePasswordDialog,
-          textProperties: const TextProperties(color: FreeWayTheme.extraBlue2),
+          textProperties: const TextProperties(color: FreeWayColors.extraBlue2),
         ),
       ],
     );
@@ -52,7 +52,7 @@ class _PasswordInput extends StatelessWidget {
         textProperties: TextProperties(
           type: TextType.body1,
           bold: true,
-          color: FreeWayTheme.officialBlue2,
+          color: FreeWayColors.officialBlue2,
         ),
       ),
       controller: _passwordControllerFieldController,
@@ -81,7 +81,7 @@ class _PhoneInput extends StatelessWidget {
         textProperties: TextProperties(
           type: TextType.body1,
           bold: true,
-          color: FreeWayTheme.officialBlue2,
+          color: FreeWayColors.officialBlue2,
         ),
       ),
       label: 'Tú numero de teléfono',
