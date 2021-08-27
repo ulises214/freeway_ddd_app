@@ -26,7 +26,7 @@ class _FreeWayAppState extends State<FreeWayApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      navigatorKey: DependencyContainer.i.getOrPut(() => AppRouter()).key,
+      navigatorKey: DependencyContainer.i.get<AppRouter>().key,
       theme: FreeWayTheme.theme,
       title: 'FreeWay',
       initialRoute: '/login',

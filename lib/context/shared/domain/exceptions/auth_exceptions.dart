@@ -1,9 +1,27 @@
 import 'package:freeway_app/context/shared/domain/exceptions/custom_exception.dart';
 
 /// Creates a facotry with the common auth exceptions
-class AuthException extends CustomException {
+abstract class AuthException extends CustomException {
   /// Can define custom [AuthException] message
   const AuthException([String? cause]) : super(cause);
+
+  /// Occurs when the email is used by anothe user
+  const factory AuthException.emailAlreadyInUse() = EmailAlreadyInUse;
+
+  /// Occurs when the phone number is used by anothe user
+  const factory AuthException.phoneNumberAlreadyInUse() = PhoneNumberAlreadyInUse;
+
+  /// Occurs when the server says the email or password is invalid
+  const factory AuthException.invalidEmailOrPassword() = InvalidEmailOrPassword;
+
+  /// Occurs when the server has an error
+  const factory AuthException.serverError() = ServerError;
+
+  /// Occurs when the application has an error
+  const factory AuthException.internalError() = InternalError;
+
+  /// When the user hasn't a valid Phone and Password
+  const factory AuthException.invalidCredentialsException() = InvalidCredentialsException;
 }
 
 /// Occurs when the email is used by anothe user
@@ -39,5 +57,5 @@ class InternalError extends AuthException {
 /// When the user hasn't a valid Phone and Password
 class InvalidCredentialsException extends AuthException {
   /// When the user hasn't a valid Phone and Password
-  InvalidCredentialsException([String? cause]) : super(cause);
+  const InvalidCredentialsException([String? cause]) : super(cause);
 }
