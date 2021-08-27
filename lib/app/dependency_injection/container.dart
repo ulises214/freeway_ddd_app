@@ -10,6 +10,9 @@ class DependencyContainer {
   /// The current instance
   static DependencyContainer get i => _i;
 
+  /// Clear all dependencies in the instance
+  Future<void> reset() async => await GetIt.I.reset(dispose: true);
+
   /// Put a lazy instance in the dependency three
   void put<T extends Object>(_DepBuilder<T> builder) => GetIt.I.registerLazySingleton<T>(builder);
 
