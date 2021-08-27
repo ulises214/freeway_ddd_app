@@ -46,13 +46,14 @@ class _StyledPasswordFormInputState extends State<CleanPasswordFormInput> {
       hiddeText: _isPasswordHidden,
       label: widget.label,
       validator: widget.validator,
+      prefixIcon: const InputIcon(FontAwesomeIcons.solidLock),
       sufixIcon: ClipOval(
         child: Material(
           type: MaterialType.transparency,
           child: InkWell(
             onTap: () => setState(() => _isPasswordHidden = !_isPasswordHidden),
             child: InputIcon(
-              _isPasswordHidden ? FontAwesomeIcons.eye : FontAwesomeIcons.eyeSlash,
+              _isPasswordHidden ? FontAwesomeIcons.solidEye : FontAwesomeIcons.solidEyeSlash,
               color: FreeWayColors.gray4,
             ),
           ),

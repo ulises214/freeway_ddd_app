@@ -25,7 +25,7 @@ class LoginScreen extends StatelessWidget {
           child: LoginFormWrapper(
             child: LoginForm(
               onSubmit: loginController.login,
-              showRestorePasswordDialog: () {},
+              showRestorePasswordDialog: loginController.showRestorePasswordDialog,
               goToSignUp: loginController.goToSignUp,
             ),
           ),

@@ -22,6 +22,7 @@ class CleanTextFormInput extends StatelessWidget {
     this.validator,
     this.keyboardType,
     this.sufixIcon,
+    this.prefixIcon,
     this.title,
     this.hiddeText = false,
   }) : super(key: key);
@@ -45,6 +46,9 @@ class CleanTextFormInput extends StatelessWidget {
   /// An icon displayed in right side for this input
   final Widget? sufixIcon;
 
+  /// An icon displayed in left side for this input
+  final Widget? prefixIcon;
+
   /// An optional title displayed up of the input
   final Widget? title;
 
@@ -65,6 +69,7 @@ class CleanTextFormInput extends StatelessWidget {
           obscureText: hiddeText,
           validator: validator?.validate,
           style: FreeWayTheme.theme.textTheme.bodyText2?.copyWith(color: FreeWayColors.black),
+          cursorColor: FreeWayColors.officialBlue1,
           decoration: InputDecoration(
             enabledBorder: _border,
             focusedBorder: _focusedBorder,
@@ -73,8 +78,11 @@ class CleanTextFormInput extends StatelessWidget {
             floatingLabelBehavior: FloatingLabelBehavior.never,
             labelText: label,
             suffixIcon: sufixIcon,
+            prefixIcon: prefixIcon,
+            contentPadding: EdgeInsets.zero,
             errorStyle: FreeWayTheme.theme.textTheme.caption?.copyWith(color: FreeWayColors.danger),
-            labelStyle: FreeWayTheme.theme.textTheme.caption?.copyWith(color: FreeWayColors.gray4),
+            labelStyle:
+                FreeWayTheme.theme.textTheme.bodyText2?.copyWith(color: FreeWayColors.gray4),
           ),
         ),
       ],

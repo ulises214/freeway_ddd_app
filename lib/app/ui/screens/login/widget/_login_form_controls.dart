@@ -86,6 +86,7 @@ class _PhoneInput extends StatelessWidget {
       ),
       label: 'Tú numero de teléfono',
       controller: _phoneFieldController,
+      prefixIcon: const InputIcon(FontAwesomeIcons.solidUser),
       validator: TextFromValidator('Número teléfonico no válido', (v) => PhoneNumber(v)),
     );
   }

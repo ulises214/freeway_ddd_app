@@ -20,6 +20,11 @@ class AppRouter {
     key.currentState?.pushNamed(screen.route);
   }
 
+  /// Close the current screen
+  void pop() {
+    key.currentState?.pop();
+  }
+
   /// Show a [Widget] as dialog
   void showDialog(Widget dialog) {
     if (key.currentContext != null) {

@@ -4,7 +4,7 @@ import 'package:freeway_app/app/ui/shared/theme.dart';
 /// An predefined style icon for the inputs
 class InputIcon extends StatelessWidget {
   /// Creates an icon with predefined styles for inputs
-  const InputIcon(this.icon, {Key? key, this.color = FreeWayColors.gray3}) : super(key: key);
+  const InputIcon(this.icon, {Key? key, this.color = FreeWayColors.gray1}) : super(key: key);
 
   /// The icon displayed in the widget
   final IconData icon;
