@@ -67,6 +67,7 @@ class RoundedButton extends StatelessWidget {
     Widget? icon,
     VoidCallback? onPressed,
   }) {
+    if (onPressed == null) return gray(text, icon: icon, size: size);
     return RoundedButton._(text,
         gradientBackground: FreeWayTheme.horizontalGradient,
         size: size,

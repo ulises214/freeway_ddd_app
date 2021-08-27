@@ -10,7 +10,6 @@ import 'package:freeway_app/app/ui/widgets/molecules/form_inputs/clean_text_form
 import 'package:freeway_app/app/ui/widgets/molecules/rounded_button.dart';
 import 'package:freeway_app/context/shared/domain/common_types/phone_number.dart';
 import 'package:freeway_app/context/shared/domain/common_types/valid_password.dart';
-import 'package:freeway_app/context/shared/domain/exceptions/invalid_argument_exception.dart';
 import 'package:freeway_app/context/user/domain/user_data.dart';
 part '_login_form_controls.dart';
 
