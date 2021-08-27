@@ -12,7 +12,7 @@ class UserRequestsBuilder {
   GLoginReq buildLoginRequest(UserData userData) {
     return GLoginReq(
       (b) => b
-        ..vars.input.cellphone.lada = userData.lada
+        ..vars.input.cellphone.lada = userData.lada.value
         ..vars.input.cellphone.number = userData.phoneNumber.value
         ..vars.input.password = userData.password.value,
     );
@@ -26,7 +26,7 @@ class UserRequestsBuilder {
     return GSignUpBuyerReq(
       (b) => b
         // ? Phone number
-        ..vars.cellPhone.lada = userData.lada
+        ..vars.cellPhone.lada = userData.lada.value
         ..vars.cellPhone.number = userData.phoneNumber.value
         // ? Passowrd
         ..vars.password = userData.password.value
@@ -47,7 +47,7 @@ class UserRequestsBuilder {
     return GSignUpCarrierReq(
       (b) => b
         // ? Phone number
-        ..vars.cellPhone.lada = userData.lada
+        ..vars.cellPhone.lada = userData.lada.value
         ..vars.cellPhone.number = userData.phoneNumber.value
         // ? Passowrd
         ..vars.password = userData.password.value

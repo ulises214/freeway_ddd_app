@@ -4,7 +4,7 @@ part '_required_string_value_object.dart';
 /// A simplified version of string
 abstract class StringValueObject {
   /// Initialize the value
-  StringValueObject(this._value);
+  const StringValueObject(this._value);
 
   /// The value contained in the class
   final String? _value;
@@ -15,4 +15,7 @@ abstract class StringValueObject {
   /// Obverrides the defualt toString
   @override
   String toString() => _value.toString();
+
+  /// Operation to verify if the value is equals to other
+  bool equals(StringValueObject other) => other.value == value;
 }
