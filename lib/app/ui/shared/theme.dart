@@ -54,14 +54,25 @@ abstract class FreeWayTheme {
   /// Red danger
   static const danger = Color.fromRGBO(0xEF, 0x53, 0x50, 1);
 
-  ///
-  static final borderRadius = BorderRadius.circular(24.0);
+  /// General borderRadius
+  static final borderRadius = BorderRadius.circular(borderRadiusSize);
+
+  /// Border radius size
+  static const borderRadiusSize = 24.0;
 
   // ? Gradients
   /// Gradient used in pages background
   static const Gradient verticalGradient = LinearGradient(
     end: Alignment.topCenter,
     begin: Alignment.bottomCenter,
+    colors: [officialBlue1, officialBlue2],
+  );
+
+  /// Gradient used in scaffold background
+  static const Gradient scaffoldGradient = LinearGradient(
+    end: Alignment.topCenter,
+    begin: Alignment.bottomCenter,
+    stops: [0.1, 0.9],
     colors: [officialBlue1, officialBlue2],
   );
 

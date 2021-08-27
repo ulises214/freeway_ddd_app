@@ -4,7 +4,7 @@ import 'package:freeway_app/app/ui/shared/theme.dart';
 import 'package:freeway_app/app/ui/widgets/molecules/elevated_logo.dart';
 
 /// A wrapper to define borders and set Logo in the form
-class LoginFormWrapper extends StatefulWidget {
+class LoginFormWrapper extends StatelessWidget {
   /// A wrapper to define borders and set Logo in the form
   const LoginFormWrapper({Key? key, required this.child}) : super(key: key);
 
@@ -12,35 +12,24 @@ class LoginFormWrapper extends StatefulWidget {
   final Widget child;
 
   @override
-  _LoginFormWrapperState createState() => _LoginFormWrapperState();
-}
-
-class _LoginFormWrapperState extends State<LoginFormWrapper> with TickerProviderStateMixin {
-  @override
   Widget build(BuildContext context) {
-    return Stack(
-      clipBehavior: Clip.none,
-      alignment: Alignment.center,
-      fit: StackFit.loose,
+    return Column(
       children: [
-        AnimatedSize(
-          duration: Duration(milliseconds: 200),
-          vsync: this,
+        const Padding(padding: EdgeInsets.symmetric(vertical: 16.0), child: ElevatedLogo()),
+        Expanded(
           child: Container(
-            padding: const EdgeInsets.all(24.0).copyWith(top: 55),
-            decoration: BoxDecoration(
+            width: double.infinity,
+            height: double.infinity,
+            decoration: const BoxDecoration(
               color: FreeWayTheme.white,
-              borderRadius: FreeWayTheme.borderRadius,
+              borderRadius: BorderRadius.vertical(
+                top: Radius.circular(FreeWayTheme.borderRadiusSize),
+              ),
             ),
-            child: widget.child,
-          ),
-        ),
-        Positioned(
-          top: -110,
-          child: AnimatedSize(
-            duration: Duration(milliseconds: 100),
-            vsync: this,
-            child: ElevatedLogo(),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(vertical: 32.0, horizontal: 16.0),
+              child: child,
+            ),
           ),
         ),
       ],
