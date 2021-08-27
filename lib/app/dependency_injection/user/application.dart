@@ -9,8 +9,8 @@ import 'package:freeway_app/context/user/application/login/login_user_runner.dar
 import 'package:freeway_app/context/user/application/restore_password/restore_user_password_query_handler.dart';
 import 'package:freeway_app/context/user/application/restore_password/restore_user_password_query_runner.dart';
 import 'package:freeway_app/context/user/domain/user_repository.dart';
-import 'package:freeway_app/context/user/infrastructure/graphql/graphql_user_repository.dart';
-import 'package:freeway_app/context/user/infrastructure/inmemory/in_memory_user_repository.dart';
+import 'package:freeway_app/context/user/infrastructure/storage/graphql/graphql_user_repository.dart';
+import 'package:freeway_app/context/user/infrastructure/storage/inmemory/in_memory_user_repository.dart';
 
 UserRepository _getRepository() => DependencyContainer.i.get<UserRepository>();
 void _registerHandler<T extends QueryHandler>(T queryH) =>

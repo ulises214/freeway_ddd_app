@@ -10,7 +10,7 @@ import 'package:freeway_app/context/shared/domain/exceptions/custom_exception.da
 import 'package:freeway_app/context/shared/infrastructure/conncection/graphql/graphql_client_facotry.dart';
 import 'package:freeway_app/context/user/domain/user_data.dart';
 import 'package:freeway_app/context/user/domain/user_repository.dart';
-import 'package:freeway_app/context/user/infrastructure/graphql/requests_builder.dart';
+import 'package:freeway_app/context/user/infrastructure/storage/graphql/requests_builder.dart';
 
 /// Implements the [UserRepository] to use graphql
 class GraphQLUserRepository implements UserRepository {

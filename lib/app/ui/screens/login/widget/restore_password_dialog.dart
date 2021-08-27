@@ -48,7 +48,9 @@ class __InputState extends State<_Input> {
   }
 
   void _handleSubmit() {
-    widget.onSubmit(EmailAddress(_emailController.text));
+    if (_formKey.currentState?.validate() == true) {
+      widget.onSubmit(EmailAddress(_emailController.text));
+    }
   }
 
   @override
@@ -60,12 +62,15 @@ class __InputState extends State<_Input> {
           'Ingresa el correo electrónico con el que te inscribiste y te enviaremos instrucciones para restablecer tu contraseña.',
         ),
         const SizedBox(height: 20),
-        CleanTextFormInput(
-          label: 'Correo electronico',
-          controller: _emailController,
-          keyboardType: TextInputType.emailAddress,
-          prefixIcon: const InputIcon(FontAwesomeIcons.solidEnvelope),
-          validator: TextFromValidator('El email no es valido', (v) => EmailAddress(v)),
+        Form(
+          key: _formKey,
+          child: CleanTextFormInput(
+            label: 'Correo electronico',
+            controller: _emailController,
+            keyboardType: TextInputType.emailAddress,
+            prefixIcon: const InputIcon(FontAwesomeIcons.solidEnvelope),
+            validator: TextFromValidator('El email no es valido', (v) => EmailAddress(v)),
+          ),
         ),
         const SizedBox(height: 20),
         RoundedButton.gradient(
