@@ -2,8 +2,7 @@
 import 'dart:developer' as dev;
 
 // 🌎 Project imports:
-import 'package:freeway_app/context/shared/domain/exceptions/custom_exception.dart';
-import 'package:freeway_app/context/shared/domain/logger.dart';
+import 'package:freeway_app/context/shared/domain/domain.dart';
 
 // ignore_for_file: avoid_print
 /// Implementation of [Logger] using the debug console

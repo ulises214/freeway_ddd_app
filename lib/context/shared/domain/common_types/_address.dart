@@ -1,6 +1,4 @@
-// 🌎 Project imports:
-
-import 'package:freeway_app/context/shared/domain/value_object/string_value_object.dart';
+part of '_common_types.dart';
 
 /// A valid addres
 class Address extends RequiredStringValueObject {

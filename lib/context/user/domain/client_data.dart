@@ -1,5 +1,5 @@
 // 🌎 Project imports:
-import 'package:freeway_app/context/shared/domain/common_types/email.dart';
+import 'package:freeway_app/context/shared/domain/domain.dart';
 import 'package:freeway_app/context/user/domain/business_name.dart';
 import 'package:freeway_app/context/user/domain/person_type.dart';
 import 'package:freeway_app/context/user/domain/user_name.dart';

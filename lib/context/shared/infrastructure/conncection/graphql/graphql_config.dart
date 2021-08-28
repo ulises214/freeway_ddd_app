@@ -1,4 +1,4 @@
-import 'package:freeway_app/context/shared/domain/access_token.dart';
+import 'package:freeway_app/context/shared/domain/domain.dart';
 
 /// Gets the configuration for the connection to a grapqhl client
 class GraphQLConfig {

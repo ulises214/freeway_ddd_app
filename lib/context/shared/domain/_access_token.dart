@@ -1,6 +1,4 @@
-// 🌎 Project imports:
-import 'package:freeway_app/context/shared/domain/agregate_root.dart';
-import 'package:freeway_app/context/shared/domain/value_object/string_value_object.dart';
+part of 'domain.dart';
 
 /// A token for the connections
 class AccessToken extends RequiredStringValueObject implements AggregateRoot {

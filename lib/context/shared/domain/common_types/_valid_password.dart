@@ -1,6 +1,4 @@
-// 🌎 Project imports:
-import 'package:freeway_app/context/shared/domain/exceptions/invalid_argument_exception.dart';
-import 'package:freeway_app/context/shared/domain/value_object/string_value_object.dart';
+part of '_common_types.dart';
 
 /// Creates a valid password
 class ValidPassword extends RequiredStringValueObject {

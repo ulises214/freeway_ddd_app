@@ -1,9 +1,5 @@
 // 🌎 Project imports:
-import 'package:freeway_app/context/shared/domain/access_token.dart';
-import 'package:freeway_app/context/shared/domain/common_types/email.dart';
-import 'package:freeway_app/context/shared/domain/common_types/phone_number.dart';
-import 'package:freeway_app/context/shared/domain/common_types/valid_password.dart';
-import 'package:freeway_app/context/shared/domain/exceptions/auth_exceptions.dart';
+import 'package:freeway_app/context/shared/domain/domain.dart';
 import 'package:freeway_app/context/user/domain/user_data.dart';
 import 'package:freeway_app/context/user/domain/user_repository.dart';
 

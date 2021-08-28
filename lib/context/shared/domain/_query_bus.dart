@@ -1,7 +1,4 @@
-// 🌎 Project imports:
-import 'package:freeway_app/context/shared/domain/query.dart';
-import 'package:freeway_app/context/shared/domain/query_handler.dart';
-import 'package:freeway_app/context/shared/domain/response.dart';
+part of 'domain.dart';
 
 /// Creates a queaque to manage the querys
 abstract class QueryBus {

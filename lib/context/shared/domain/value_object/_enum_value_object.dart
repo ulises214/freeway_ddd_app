@@ -1,3 +1,5 @@
+part of '_value_object.dart';
+
 /// Creates a class to manage logic for enums
 abstract class EnumValueObject<T> {
   /// Creates a class to manage logic for enums

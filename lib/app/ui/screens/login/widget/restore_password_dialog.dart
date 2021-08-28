@@ -7,7 +7,7 @@ import 'package:freeway_app/app/ui/widgets/atoms/styled_text.dart';
 import 'package:freeway_app/app/ui/widgets/molecules/form_inputs/clean_text_form_input.dart';
 import 'package:freeway_app/app/ui/widgets/molecules/rounded_button.dart';
 import 'package:freeway_app/app/ui/widgets/organisms/dialogs/basic_dialog.dart';
-import 'package:freeway_app/context/shared/domain/common_types/email.dart';
+import 'package:freeway_app/context/shared/domain/domain.dart';
 
 /// Show a [BasicDialog] with a input to sen a restore password email
 class RestorePasswordDialog extends StatelessWidget {

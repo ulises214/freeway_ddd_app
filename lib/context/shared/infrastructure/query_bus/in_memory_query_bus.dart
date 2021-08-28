@@ -1,8 +1,6 @@
 // 🌎 Project imports:
-import 'package:freeway_app/context/shared/domain/query.dart';
-import 'package:freeway_app/context/shared/domain/query_bus.dart';
-import 'package:freeway_app/context/shared/domain/query_handler.dart';
-import 'package:freeway_app/context/shared/domain/response.dart';
+import 'package:freeway_app/context/shared/domain/domain.dart';
+
 import 'package:freeway_app/context/shared/infrastructure/query_bus/query_handlers_information.dart';
 
 /// Creates a queaque in memory for the querys

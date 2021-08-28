@@ -1,8 +1,4 @@
-// 📦 Package imports:
-import 'package:uuid/uuid.dart' as uuid_library;
-
-// 🌎 Project imports:
-import 'package:freeway_app/context/shared/domain/exceptions/invalid_argument_exception.dart';
+part of '_value_object.dart';
 
 const _uuidGenerator = uuid_library.Uuid();
 

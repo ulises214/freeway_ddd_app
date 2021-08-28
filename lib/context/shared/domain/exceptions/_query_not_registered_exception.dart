@@ -1,6 +1,4 @@
-// 🌎 Project imports:
-import 'package:freeway_app/context/shared/domain/exceptions/custom_exception.dart';
-import 'package:freeway_app/context/shared/domain/query.dart';
+part of '_exceptions.dart';
 
 /// Exception when the query handler isnt registered
 class QueryNotRegisteredException extends CustomException {

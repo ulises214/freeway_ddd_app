@@ -1,5 +1,4 @@
-// 🌎 Project imports:
-import 'package:freeway_app/context/shared/domain/exceptions/custom_exception.dart';
+part of '_exceptions.dart';
 
 /// Creates an expection when an erro is caused doued to connection
 class ConnectionException extends CustomException {

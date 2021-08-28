@@ -1,3 +1,5 @@
+part of 'domain.dart';
+
 /// Define the execute enviroment for the application, this is used for the dependency injection
 enum Environment {
   /// When the application is to production

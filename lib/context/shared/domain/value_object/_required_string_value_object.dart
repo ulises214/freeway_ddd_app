@@ -1,4 +1,4 @@
-part of 'string_value_object.dart';
+part of '_value_object.dart';
 
 /// A String class that can't get a empty value
 class RequiredStringValueObject extends StringValueObject {

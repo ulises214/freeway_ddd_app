@@ -1,4 +1,4 @@
-import 'package:freeway_app/context/shared/domain/access_token.dart';
+import 'package:freeway_app/context/shared/domain/domain.dart';
 
 /// An interface to store/read data from the device
 abstract class LocalStorageRepository {

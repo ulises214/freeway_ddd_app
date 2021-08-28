@@ -1,4 +1,4 @@
-import 'package:freeway_app/context/shared/domain/exceptions/custom_exception.dart';
+part of '_exceptions.dart';
 
 /// Creates a facotry with the common auth exceptions
 abstract class AuthException extends CustomException {

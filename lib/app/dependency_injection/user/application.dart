@@ -1,8 +1,7 @@
 // 🌎 Project imports:
 import 'package:freeway_app/app/dependency_injection/container.dart';
-import 'package:freeway_app/context/shared/domain/env.dart';
-import 'package:freeway_app/context/shared/domain/query_bus.dart';
-import 'package:freeway_app/context/shared/domain/query_handler.dart';
+import 'package:freeway_app/context/shared/domain/domain.dart';
+
 import 'package:freeway_app/context/shared/infrastructure/conncection/graphql/graphql_client_facotry.dart';
 import 'package:freeway_app/context/user/application/user_uses_cases.dart';
 import 'package:freeway_app/context/user/domain/user_repository.dart';

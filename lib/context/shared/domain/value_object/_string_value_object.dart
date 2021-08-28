@@ -1,5 +1,4 @@
-import 'package:freeway_app/context/shared/domain/exceptions/invalid_argument_exception.dart';
-part '_required_string_value_object.dart';
+part of '_value_object.dart';
 
 /// A simplified version of string
 abstract class StringValueObject {

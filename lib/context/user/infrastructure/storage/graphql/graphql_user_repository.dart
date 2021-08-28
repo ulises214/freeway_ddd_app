@@ -2,11 +2,7 @@
 import 'package:ferry/ferry.dart';
 
 // 🌎 Project imports:
-import 'package:freeway_app/context/shared/domain/access_token.dart';
-import 'package:freeway_app/context/shared/domain/common_types/email.dart';
-import 'package:freeway_app/context/shared/domain/exceptions/auth_exceptions.dart';
-import 'package:freeway_app/context/shared/domain/exceptions/connection_exception.dart';
-import 'package:freeway_app/context/shared/domain/exceptions/custom_exception.dart';
+import 'package:freeway_app/context/shared/domain/domain.dart';
 import 'package:freeway_app/context/shared/infrastructure/conncection/graphql/graphql_client_facotry.dart';
 import 'package:freeway_app/context/user/domain/user_data.dart';
 import 'package:freeway_app/context/user/domain/user_repository.dart';

@@ -1,8 +1,7 @@
 // 🌎 Project imports:
-import 'package:flutter/cupertino.dart';
-import 'package:freeway_app/context/shared/domain/common_types/phone_number.dart';
-import 'package:freeway_app/context/shared/domain/common_types/valid_password.dart';
-import 'package:freeway_app/context/shared/domain/value_object/string_value_object.dart';
+
+import 'package:flutter/material.dart';
+import 'package:freeway_app/context/shared/domain/domain.dart';
 
 /// The data required for login the user
 class UserData {

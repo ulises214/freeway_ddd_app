@@ -1,6 +1,5 @@
 // 🌎 Project imports:
-import 'package:freeway_app/context/shared/domain/agregate_root.dart';
-import 'package:freeway_app/context/shared/domain/exceptions/invalid_argument_exception.dart';
+import 'package:freeway_app/context/shared/domain/domain.dart';
 import 'package:freeway_app/context/user/domain/carrier_data.dart';
 import 'package:freeway_app/context/user/domain/client_data.dart';
 import 'package:freeway_app/context/user/domain/user_data.dart';

@@ -1,5 +1,4 @@
-// 🌎 Project imports:
-import 'package:freeway_app/context/shared/domain/exceptions/custom_exception.dart';
+part of 'domain.dart';
 
 /// An interface to store the logs for the application
 abstract class Logger {

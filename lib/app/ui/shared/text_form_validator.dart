@@ -1,5 +1,4 @@
-import 'package:freeway_app/context/shared/domain/exceptions/invalid_argument_exception.dart';
-import 'package:freeway_app/context/shared/domain/value_object/string_value_object.dart';
+import 'package:freeway_app/context/shared/domain/domain.dart';
 
 /// A text form validator based on exception caused by [StringValueObject]
 class TextFromValidator<T extends StringValueObject> {

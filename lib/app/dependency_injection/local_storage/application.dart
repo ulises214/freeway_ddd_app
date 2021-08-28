@@ -3,9 +3,7 @@ import 'package:freeway_app/context/local_storage/application/access_token/acces
 import 'package:freeway_app/context/local_storage/domain/local_storage_respository.dart';
 import 'package:freeway_app/context/local_storage/infrastructure/hive_local_storage_repository.dart';
 import 'package:freeway_app/context/local_storage/infrastructure/inmemory_local_storage_repository.dart';
-import 'package:freeway_app/context/shared/domain/env.dart';
-import 'package:freeway_app/context/shared/domain/query_bus.dart';
-import 'package:freeway_app/context/shared/domain/query_handler.dart';
+import 'package:freeway_app/context/shared/domain/domain.dart';
 
 LocalStorageRepository _getRepository() => DependencyContainer.i.get<LocalStorageRepository>();
 void _registerHandler<T extends QueryHandler>(T queryH) =>

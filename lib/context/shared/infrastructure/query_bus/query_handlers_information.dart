@@ -1,7 +1,5 @@
 // 🌎 Project imports:
-import 'package:freeway_app/context/shared/domain/exceptions/query_not_registered_exception.dart';
-import 'package:freeway_app/context/shared/domain/query.dart';
-import 'package:freeway_app/context/shared/domain/query_handler.dart';
+import 'package:freeway_app/context/shared/domain/domain.dart';
 
 /// Store the [QueryHandler] injected and manage the searching
 class QueryHandlersInformation {

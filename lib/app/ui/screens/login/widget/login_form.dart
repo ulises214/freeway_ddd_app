@@ -10,8 +10,7 @@ import 'package:freeway_app/app/ui/widgets/atoms/text_link.dart';
 import 'package:freeway_app/app/ui/widgets/molecules/form_inputs/clean_password_form_input.dart';
 import 'package:freeway_app/app/ui/widgets/molecules/form_inputs/clean_text_form_input.dart';
 import 'package:freeway_app/app/ui/widgets/molecules/rounded_button.dart';
-import 'package:freeway_app/context/shared/domain/common_types/phone_number.dart';
-import 'package:freeway_app/context/shared/domain/common_types/valid_password.dart';
+import 'package:freeway_app/context/shared/domain/domain.dart';
 import 'package:freeway_app/context/user/domain/user_data.dart';
 part '_login_form_controls.dart';
 
