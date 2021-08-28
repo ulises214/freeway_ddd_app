@@ -1,0 +1,73 @@
+// 📦 Package imports:
+import 'package:flutter_test/flutter_test.dart';
+import 'package:freeway_app/app/dependency_injection/container.dart';
+import 'package:freeway_app/app/ui/routes.dart';
+import 'package:freeway_app/context/local_storage/domain/domain.dart';
+import 'package:freeway_app/context/shared/domain/domain.dart';
+import 'package:mockito/annotations.dart';
+
+// 🌎 Project imports:
+import 'package:freeway_app/app/controllers/controller.dart';
+import 'package:freeway_app/context/user/domain/domain.dart';
+import 'package:mockito/mockito.dart';
+import 'splash_screen_controller_test.mocks.dart';
+
+@GenerateMocks([
+  AppRouter,
+  UserRepository,
+  LocalStorageRepository,
+])
+void main() {
+  final appRputer = MockAppRouter();
+  final userRepository = MockUserRepository();
+  final localStorageRepository = MockLocalStorageRepository();
+  late final SplashScreenController controller;
+  setUpAll(() async {
+    await DependencyContainer.i.reset();
+    DependencyContainer.i
+      ..put<UserRepository>(() => userRepository)
+      ..put<LocalStorageRepository>(() => localStorageRepository)
+      ..put<AppRouter>(() => appRputer);
+    controller = SplashScreenController();
+  });
+  tearDown(() {
+    reset(appRputer);
+    reset(userRepository);
+    reset(localStorageRepository);
+  });
+  group('Splash screen controller', () {
+    test(
+      'Given an false response When the controlled is called Then the approuter go to login',
+      () async {
+        when(localStorageRepository.getToken()).thenAnswer((_) async => null);
+        await controller.requestUserInfo();
+        verifyNever(userRepository.validateToken(captureAny));
+        verifyNever(appRputer.offAll(RoutesDefinitions.home));
+        verify(appRputer.offAll(RoutesDefinitions.login));
+      },
+    );
+    test(
+      'Given an invalid token response from localstorage When the controlled is called Then the approuter go to login',
+      () async {
+        when(localStorageRepository.getToken())
+            .thenAnswer((_) async => AccessToken('Invalid token'));
+        when(userRepository.validateToken(captureAny)).thenAnswer((_) async => false);
+        await controller.requestUserInfo();
+        verify(userRepository.validateToken(captureAny));
+        verify(appRputer.offAll(RoutesDefinitions.login));
+        verifyNever(appRputer.offAll(RoutesDefinitions.home));
+      },
+    );
+    test(
+      'Given a valid token response from localstorage When the controlled is called Then the approuter go to home',
+      () async {
+        when(localStorageRepository.getToken()).thenAnswer((_) async => AccessToken('Valid token'));
+        when(userRepository.validateToken(captureAny)).thenAnswer((_) async => true);
+        await controller.requestUserInfo();
+        verify(userRepository.validateToken(captureAny));
+        verify(appRputer.offAll(RoutesDefinitions.home));
+        verifyNever(appRputer.offAll(RoutesDefinitions.login));
+      },
+    );
+  });
+}
