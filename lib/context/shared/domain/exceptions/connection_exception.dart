@@ -4,5 +4,5 @@ import 'package:freeway_app/context/shared/domain/exceptions/custom_exception.da
 /// Creates an expection when an erro is caused doued to connection
 class ConnectionException extends CustomException {
   /// Creates an expection when an erro is caused doued to connection
-  ConnectionException([String? cause]) : super(cause);
+  const ConnectionException([String? cause]) : super(cause);
 }

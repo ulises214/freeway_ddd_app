@@ -2,21 +2,20 @@
 import 'package:freeway_app/context/shared/domain/exceptions/query_not_registered_exception.dart';
 import 'package:freeway_app/context/shared/domain/query.dart';
 import 'package:freeway_app/context/shared/domain/query_handler.dart';
-import 'package:freeway_app/context/shared/domain/response.dart';
 
 /// Store the [QueryHandler] injected and manage the searching
 class QueryHandlersInformation {
   /// Store the [QueryHandler] injected and manage the searching
-  QueryHandlersInformation(List<QueryHandler<Query, Response>> queryHandlers) {
+  QueryHandlersInformation(List<QueryHandler> queryHandlers) {
     _queryHandlersMap = _formatHandlers(queryHandlers);
   }
-  late final Map<Type, QueryHandler<Query, Response>> _queryHandlersMap;
+  late final Map<Type, QueryHandler> _queryHandlersMap;
 
-  Map<Type, QueryHandler<Query, Response>> _formatHandlers(
-    List<QueryHandler<Query, Response>> queryHandlers,
+  Map<Type, QueryHandler> _formatHandlers(
+    List<QueryHandler> queryHandlers,
   ) {
-    final handlersMap = <Type, QueryHandler<Query, Response>>{};
-    void addHandler(QueryHandler<Query, Response> h) => handlersMap[h.suscribedTo()] = h;
+    final handlersMap = <Type, QueryHandler>{};
+    void addHandler(QueryHandler h) => handlersMap[h.suscribedTo()] = h;
     queryHandlers.forEach(addHandler);
     return handlersMap;
   }
@@ -27,8 +26,8 @@ class QueryHandlersInformation {
   }
 
   /// Search the corresponding [QueryHandler]
-  QueryHandler<Query, Response> search(Query query) {
-    final queryHandler = _queryHandlersMap[query];
+  QueryHandler search(Query query) {
+    final queryHandler = _queryHandlersMap[query.runtimeType];
     if (queryHandler == null) throw QueryNotRegisteredException(query);
     return queryHandler;
   }
