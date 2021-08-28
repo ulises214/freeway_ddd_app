@@ -1,7 +1,4 @@
-// 🌎 Project imports:
-
-import 'package:flutter/material.dart';
-import 'package:freeway_app/context/shared/domain/domain.dart';
+part of 'domain.dart';
 
 /// The data required for login the user
 class UserData {

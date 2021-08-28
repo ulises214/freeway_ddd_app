@@ -4,8 +4,7 @@ import 'package:ferry/ferry.dart';
 // 🌎 Project imports:
 import 'package:freeway_app/context/shared/domain/domain.dart';
 import 'package:freeway_app/context/shared/infrastructure/infrastrucutre.dart';
-import 'package:freeway_app/context/user/domain/user_data.dart';
-import 'package:freeway_app/context/user/domain/user_repository.dart';
+import 'package:freeway_app/context/user/domain/domain.dart';
 import 'package:freeway_app/context/user/infrastructure/storage/graphql/requests_builder.dart';
 
 /// Implements the [UserRepository] to use graphql

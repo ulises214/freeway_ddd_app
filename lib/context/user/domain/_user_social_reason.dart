@@ -1,6 +1,4 @@
-// 🌎 Project imports:
-
-import 'package:freeway_app/context/shared/domain/domain.dart';
+part of 'domain.dart';
 
 /// The social reason for a user
 class UserSocialReson extends RequiredStringValueObject {

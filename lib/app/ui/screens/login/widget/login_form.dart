@@ -11,7 +11,7 @@ import 'package:freeway_app/app/ui/widgets/molecules/form_inputs/clean_password_
 import 'package:freeway_app/app/ui/widgets/molecules/form_inputs/clean_text_form_input.dart';
 import 'package:freeway_app/app/ui/widgets/molecules/rounded_button.dart';
 import 'package:freeway_app/context/shared/domain/domain.dart';
-import 'package:freeway_app/context/user/domain/user_data.dart';
+import 'package:freeway_app/context/user/domain/domain.dart';
 part '_login_form_controls.dart';
 
 /// Form for login user controllers

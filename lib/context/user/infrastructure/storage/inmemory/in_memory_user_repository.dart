@@ -1,7 +1,6 @@
 // 🌎 Project imports:
 import 'package:freeway_app/context/shared/domain/domain.dart';
-import 'package:freeway_app/context/user/domain/user_data.dart';
-import 'package:freeway_app/context/user/domain/user_repository.dart';
+import 'package:freeway_app/context/user/domain/domain.dart';
 
 final _userData = <UserData>[
   UserData(phoneNumber: PhoneNumber('3123398831'), password: ValidPassword('12345678')),

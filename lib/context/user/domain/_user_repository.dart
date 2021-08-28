@@ -1,6 +1,4 @@
-// 🌎 Project imports:
-import 'package:freeway_app/context/shared/domain/domain.dart';
-import 'package:freeway_app/context/user/domain/user_data.dart';
+part of 'domain.dart';
 
 /// Creates a repository for the user operations
 abstract class UserRepository {

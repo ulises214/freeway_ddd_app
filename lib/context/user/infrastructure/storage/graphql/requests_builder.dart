@@ -1,7 +1,6 @@
 // 🌎 Project imports:
-import 'package:freeway_app/context/user/domain/carrier_data.dart';
-import 'package:freeway_app/context/user/domain/client_data.dart';
-import 'package:freeway_app/context/user/domain/user_data.dart';
+import 'package:freeway_app/context/user/domain/domain.dart';
+
 import 'requests/login.req.gql.dart';
 import 'requests/sign_up_buyer.req.gql.dart';
 import 'requests/sign_up_carrier.req.gql.dart';

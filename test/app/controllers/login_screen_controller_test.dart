@@ -10,8 +10,7 @@ import 'package:freeway_app/context/local_storage/domain/local_storage_resposito
 import 'package:freeway_app/context/shared/domain/domain.dart';
 import 'package:freeway_app/context/shared/infrastructure/infrastrucutre.dart';
 import 'package:freeway_app/context/user/application/user_uses_cases.dart';
-import 'package:freeway_app/context/user/domain/user_data.dart';
-import 'package:freeway_app/context/user/domain/user_repository.dart';
+import 'package:freeway_app/context/user/domain/domain.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'package:faker/faker.dart';

@@ -1,8 +1,4 @@
-// 🌎 Project imports:
-import 'package:freeway_app/context/shared/domain/domain.dart';
-import 'package:freeway_app/context/user/domain/business_name.dart';
-import 'package:freeway_app/context/user/domain/person_type.dart';
-import 'package:freeway_app/context/user/domain/user_name.dart';
+part of 'domain.dart';
 
 /// The data for a user of type Client
 class ClientData {

@@ -1,8 +1,4 @@
-// 🌎 Project imports:
-import 'package:freeway_app/context/shared/domain/domain.dart';
-import 'package:freeway_app/context/user/domain/carrier_data.dart';
-import 'package:freeway_app/context/user/domain/client_data.dart';
-import 'package:freeway_app/context/user/domain/user_data.dart';
+part of 'domain.dart';
 
 /// The user information for the application
 class User extends AggregateRoot {

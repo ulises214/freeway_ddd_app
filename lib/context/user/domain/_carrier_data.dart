@@ -1,12 +1,4 @@
-// 🎯 Dart imports:
-import 'dart:io';
-
-// 🌎 Project imports:
-import 'package:freeway_app/context/shared/domain/domain.dart';
-import 'package:freeway_app/context/user/domain/business_name.dart';
-import 'package:freeway_app/context/user/domain/person_type.dart';
-import 'package:freeway_app/context/user/domain/user_name.dart';
-import 'package:freeway_app/context/user/domain/user_social_reason.dart';
+part of 'domain.dart';
 
 /// The data for a user of type Carrier
 class CarrierData {

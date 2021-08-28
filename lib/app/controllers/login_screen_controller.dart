@@ -8,8 +8,7 @@ import 'package:freeway_app/context/local_storage/application/access_token/acces
 import 'package:freeway_app/context/shared/application/application.dart';
 import 'package:freeway_app/context/shared/domain/domain.dart';
 import 'package:freeway_app/context/user/application/user_uses_cases.dart';
-import 'package:freeway_app/context/user/domain/user_data.dart';
-import 'package:freeway_app/context/user/domain/user_repository.dart';
+import 'package:freeway_app/context/user/domain/domain.dart';
 
 /// The controller for the operations in the login screen
 class LoginScreenController {

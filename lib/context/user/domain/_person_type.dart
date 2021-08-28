@@ -1,3 +1,5 @@
+part of 'domain.dart';
+
 /// The 2 types of person that a user can be
 enum PersonType {
   /// Person of type [PersonType.moral] is a group of persons

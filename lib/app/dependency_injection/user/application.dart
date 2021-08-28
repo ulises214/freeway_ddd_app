@@ -4,7 +4,7 @@ import 'package:freeway_app/context/shared/domain/domain.dart';
 
 import 'package:freeway_app/context/shared/infrastructure/infrastrucutre.dart';
 import 'package:freeway_app/context/user/application/user_uses_cases.dart';
-import 'package:freeway_app/context/user/domain/user_repository.dart';
+import 'package:freeway_app/context/user/domain/domain.dart';
 import 'package:freeway_app/context/user/infrastructure/storage/graphql/graphql_user_repository.dart';
 import 'package:freeway_app/context/user/infrastructure/storage/inmemory/in_memory_user_repository.dart';
 
