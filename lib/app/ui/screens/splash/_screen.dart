@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 // 🌎 Project imports:
 import 'package:freeway_app/app/controllers/controller.dart';
 import 'package:freeway_app/app/dependency_injection/container.dart';
+import 'package:freeway_app/app/ui/screens/splash/widget/_splash_title.dart';
 import 'package:freeway_app/app/ui/shared/shared.dart';
 import 'package:freeway_app/app/ui/widgets/molecules/molecules.dart';
 
@@ -22,6 +23,17 @@ class _SplashScreenState extends State<SplashScreen> {
     WidgetsBinding.instance?.addPostFrameCallback((_) => splashController.requestUserInfo());
     super.initState();
   }
+
+  @override
+  Widget build(BuildContext context) {
+    return const _ScreenView();
+  }
+}
+
+class _ScreenView extends StatelessWidget {
+  const _ScreenView({
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
