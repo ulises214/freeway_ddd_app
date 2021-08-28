@@ -1,9 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:freeway_app/app/ui/shared/shared.dart';
-import 'package:freeway_app/app/ui/widgets/atoms/atoms.dart';
-import 'package:freeway_app/app/ui/widgets/molecules/molecules.dart';
-import 'package:freeway_app/app/ui/widgets/organisms/dialogs/basic_dialog.dart';
+part of '_dialogs.dart';
 
 /// Show an Dialog with Icon and [text]
 class ErrorDialog extends StatelessWidget {
@@ -27,7 +22,10 @@ class ErrorDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BasicDialog(
-      title: _Title(title: title),
+      title: _Title(
+        title: title,
+        icon: const ModalIcon(FontAwesomeIcons.solidCircleXmark, color: FreeWayColors.danger),
+      ),
       content: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
@@ -39,31 +37,6 @@ class ErrorDialog extends StatelessWidget {
           RoundedButton.gradient('Aceptar', onPressed: () => Navigator.of(context).pop()),
         ],
       ),
-    );
-  }
-}
-
-class _Title extends StatelessWidget {
-  const _Title({
-    Key? key,
-    required this.title,
-  }) : super(key: key);
-
-  final String title;
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        StyledText(
-          title,
-          textProperties: const TextProperties(type: TextType.h6, color: FreeWayColors.danger),
-        ),
-        const Center(
-          child: ModalIcon(FontAwesomeIcons.solidCircleXmark, color: FreeWayColors.danger),
-        ),
-      ],
     );
   }
 }

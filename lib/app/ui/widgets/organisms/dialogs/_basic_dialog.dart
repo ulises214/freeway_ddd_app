@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+part of '_dialogs.dart';
 
 /// A dialog base, provides shape, color and padings
 class BasicDialog extends StatelessWidget {
