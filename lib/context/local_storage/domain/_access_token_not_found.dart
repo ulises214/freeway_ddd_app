@@ -1,3 +1,4 @@
+// 🌎 Project imports:
 import 'package:freeway_app/context/shared/domain/domain.dart';
 
 /// When the accesstoken isn't fonund in local storage this exception is throwed

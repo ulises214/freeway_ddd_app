@@ -7,4 +7,7 @@ abstract class UserRepository {
 
   /// Send an email to restore the passowrd
   Future<void> requestRestorePassword(EmailAddress email);
+
+  /// Verify with the server if a token is valid
+  Future<bool> validateToken(AccessToken token);
 }

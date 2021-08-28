@@ -1,3 +1,6 @@
+// 🎯 Dart imports:
+import 'dart:math';
+
 // 🌎 Project imports:
 import 'package:freeway_app/context/shared/domain/domain.dart';
 import 'package:freeway_app/context/user/domain/domain.dart';
@@ -27,5 +30,10 @@ class InMemoryUserRepository implements UserRepository {
   @override
   Future<void> requestRestorePassword(EmailAddress email) {
     return Future.value();
+  }
+
+  @override
+  Future<bool> validateToken(AccessToken token) async {
+    return Random().nextBool();
   }
 }

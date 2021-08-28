@@ -35,4 +35,10 @@ class GraphQLUserRepository implements UserRepository {
 
   @override
   Future<void> requestRestorePassword(EmailAddress email) async {}
+
+  @override
+  Future<bool> validateToken(AccessToken token) {
+    // TODO: implement validateToken
+    throw UnimplementedError();
+  }
 }

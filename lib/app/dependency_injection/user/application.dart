@@ -44,12 +44,17 @@ void _injectGraphQL() {
 
 void _injectQueryHandlers() {
   final loginQueryHandler = LoginUserQueryHandler(LoginUserRunner(_getRepository()));
+  final validateTokenQueryHandler = ValidateTokenQueryHandler(
+    ValidateTokenRunner(_getRepository()),
+  );
   final restorePasswordQueryHandler = RestoreUserPasswordQueryHandler(
     RestoreUserPasswordRunner(_getRepository()),
   );
   _registerHandler(loginQueryHandler);
   _registerHandler(restorePasswordQueryHandler);
+  _registerHandler(validateTokenQueryHandler);
   DependencyContainer.i
-    ..put<LoginUserQueryHandler>(() => loginQueryHandler)
-    ..put<RestoreUserPasswordQueryHandler>(() => restorePasswordQueryHandler);
+    ..put(() => loginQueryHandler)
+    ..put(() => restorePasswordQueryHandler)
+    ..put(() => validateTokenQueryHandler);
 }
