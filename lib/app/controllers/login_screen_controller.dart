@@ -5,7 +5,7 @@ import 'package:freeway_app/app/controllers/router.dart';
 import 'package:freeway_app/app/ui/screens/login/widget/restore_password_dialog.dart';
 import 'package:freeway_app/app/ui/shared/dialogs_messages.dart';
 import 'package:freeway_app/context/local_storage/application/access_token/access_token_uses_cases.dart';
-import 'package:freeway_app/context/shared/application/access_token_response.dart';
+import 'package:freeway_app/context/shared/application/application.dart';
 import 'package:freeway_app/context/shared/domain/domain.dart';
 import 'package:freeway_app/context/user/application/user_uses_cases.dart';
 import 'package:freeway_app/context/user/domain/user_data.dart';

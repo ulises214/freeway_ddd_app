@@ -1,4 +1,4 @@
-import 'package:freeway_app/context/shared/application/access_token_response.dart';
+import 'package:freeway_app/context/shared/application/application.dart';
 import 'package:freeway_app/context/shared/domain/domain.dart';
 import 'package:freeway_app/context/user/domain/user_data.dart';
 import 'package:freeway_app/context/user/domain/user_repository.dart';

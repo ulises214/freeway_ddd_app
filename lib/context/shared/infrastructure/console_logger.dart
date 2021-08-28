@@ -1,10 +1,7 @@
-// 🎯 Dart imports:
 import 'dart:developer' as dev;
-
-// 🌎 Project imports:
+// ignore_for_file: avoid_print
 import 'package:freeway_app/context/shared/domain/domain.dart';
 
-// ignore_for_file: avoid_print
 /// Implementation of [Logger] using the debug console
 class ConsoleLogger implements Logger {
   @override

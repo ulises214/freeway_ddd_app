@@ -1,4 +1,4 @@
-import 'package:freeway_app/context/shared/application/void_response.dart';
+import 'package:freeway_app/context/shared/application/application.dart';
 import 'package:freeway_app/context/shared/domain/domain.dart';
 import 'package:freeway_app/context/user/domain/user_repository.dart';
 
