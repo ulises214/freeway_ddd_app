@@ -18,7 +18,7 @@ part '_login_form_controls.dart';
 /// Form for login user controllers
 class LoginForm extends StatefulWidget {
   /// Create the form to login a user
-  LoginForm({
+  const LoginForm({
     Key? key,
     required this.onSubmit,
     required this.showRestorePasswordDialog,
