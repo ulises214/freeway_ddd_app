@@ -9,7 +9,7 @@ class GetAccessTokenRunner {
   /// Excecute the operation
   Future<AccessTokenReponse> run() async {
     final token = await _repository.getToken();
-    if (token == null) throw const AuthException.invalidCredentialsException();
+    if (token == null) throw const AccessTokenNotFound();
     return AccessTokenReponse(token);
   }
 }
