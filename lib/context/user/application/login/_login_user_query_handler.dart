@@ -1,8 +1,4 @@
-// 🌎 Project imports:
-import 'package:freeway_app/context/shared/application/access_token_response.dart';
-import 'package:freeway_app/context/shared/domain/query_handler.dart';
-import 'package:freeway_app/context/user/application/login/login_user_query.dart';
-import 'package:freeway_app/context/user/application/login/login_user_runner.dart';
+part of '_login_use_case.dart';
 
 /// Handle the query for the login user
 class LoginUserQueryHandler implements QueryHandler<LoginUserQuery, AccessTokenReponse> {

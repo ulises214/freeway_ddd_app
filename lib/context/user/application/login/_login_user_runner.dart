@@ -1,7 +1,4 @@
-// 🌎 Project imports:
-import 'package:freeway_app/context/shared/application/access_token_response.dart';
-import 'package:freeway_app/context/user/domain/user_data.dart';
-import 'package:freeway_app/context/user/domain/user_repository.dart';
+part of '_login_use_case.dart';
 
 /// Run the operation for the login
 class LoginUserRunner {

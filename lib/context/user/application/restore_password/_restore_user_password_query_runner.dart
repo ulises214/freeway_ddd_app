@@ -1,7 +1,4 @@
-// 🌎 Project imports:
-import 'package:freeway_app/context/shared/application/void_response.dart';
-import 'package:freeway_app/context/shared/domain/common_types/email.dart';
-import 'package:freeway_app/context/user/domain/user_repository.dart';
+part of '_restore_password_use_case.dart';
 
 /// Run the restore passowrd operation
 class RestoreUserPasswordRunner {

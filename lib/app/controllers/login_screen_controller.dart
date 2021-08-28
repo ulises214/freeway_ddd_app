@@ -12,8 +12,7 @@ import 'package:freeway_app/context/shared/domain/exceptions/connection_exceptio
 import 'package:freeway_app/context/shared/domain/exceptions/custom_exception.dart';
 import 'package:freeway_app/context/shared/domain/logger.dart';
 import 'package:freeway_app/context/shared/domain/query_bus.dart';
-import 'package:freeway_app/context/user/application/login/login_user_query.dart';
-import 'package:freeway_app/context/user/application/restore_password/restore_user_password_query.dart';
+import 'package:freeway_app/context/user/application/user_uses_cases.dart';
 import 'package:freeway_app/context/user/domain/user_data.dart';
 import 'package:freeway_app/context/user/domain/user_repository.dart';
 

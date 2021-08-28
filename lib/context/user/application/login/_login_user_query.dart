@@ -1,6 +1,4 @@
-// 🌎 Project imports:
-import 'package:freeway_app/context/shared/domain/query.dart';
-import 'package:freeway_app/context/user/domain/user_data.dart';
+part of '_login_use_case.dart';
 
 /// Creates the query for the login of an user
 class LoginUserQuery implements Query {

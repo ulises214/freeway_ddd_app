@@ -1,8 +1,4 @@
-// 🌎 Project imports:
-import 'package:freeway_app/context/shared/application/void_response.dart';
-import 'package:freeway_app/context/shared/domain/query_handler.dart';
-import 'package:freeway_app/context/user/application/restore_password/restore_user_password_query.dart';
-import 'package:freeway_app/context/user/application/restore_password/restore_user_password_query_runner.dart';
+part of '_restore_password_use_case.dart';
 
 /// Handle the restore password query
 class RestoreUserPasswordQueryHandler
