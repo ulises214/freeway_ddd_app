@@ -2,7 +2,7 @@
 import 'package:freeway_app/app/dependency_injection/container.dart';
 import 'package:freeway_app/context/shared/domain/domain.dart';
 
-import 'package:freeway_app/context/shared/infrastructure/conncection/graphql/graphql_client_facotry.dart';
+import 'package:freeway_app/context/shared/infrastructure/infrastrucutre.dart';
 import 'package:freeway_app/context/user/application/user_uses_cases.dart';
 import 'package:freeway_app/context/user/domain/user_repository.dart';
 import 'package:freeway_app/context/user/infrastructure/storage/graphql/graphql_user_repository.dart';

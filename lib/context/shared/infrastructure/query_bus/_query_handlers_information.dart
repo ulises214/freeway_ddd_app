@@ -1,5 +1,4 @@
-// 🌎 Project imports:
-import 'package:freeway_app/context/shared/domain/domain.dart';
+part of '_in_memory_query_bus.dart';
 
 /// Store the [QueryHandler] injected and manage the searching
 class QueryHandlersInformation {

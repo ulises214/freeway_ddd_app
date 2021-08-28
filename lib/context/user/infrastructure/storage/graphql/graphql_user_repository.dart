@@ -3,7 +3,7 @@ import 'package:ferry/ferry.dart';
 
 // 🌎 Project imports:
 import 'package:freeway_app/context/shared/domain/domain.dart';
-import 'package:freeway_app/context/shared/infrastructure/conncection/graphql/graphql_client_facotry.dart';
+import 'package:freeway_app/context/shared/infrastructure/infrastrucutre.dart';
 import 'package:freeway_app/context/user/domain/user_data.dart';
 import 'package:freeway_app/context/user/domain/user_repository.dart';
 import 'package:freeway_app/context/user/infrastructure/storage/graphql/requests_builder.dart';

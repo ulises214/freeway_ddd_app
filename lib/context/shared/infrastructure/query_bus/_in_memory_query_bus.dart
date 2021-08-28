@@ -1,7 +1,7 @@
 // 🌎 Project imports:
 import 'package:freeway_app/context/shared/domain/domain.dart';
 
-import 'package:freeway_app/context/shared/infrastructure/query_bus/query_handlers_information.dart';
+part '_query_handlers_information.dart';
 
 /// Creates a queaque in memory for the querys
 class InMemoryQueryBus implements QueryBus {

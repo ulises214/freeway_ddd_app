@@ -1,6 +1,6 @@
 import 'package:freeway_app/context/local_storage/domain/local_storage_respository.dart';
 import 'package:freeway_app/context/shared/domain/domain.dart';
-import 'package:freeway_app/context/shared/infrastructure/storage/hive_storage_box.dart';
+import 'package:freeway_app/context/shared/infrastructure/infrastrucutre.dart';
 
 const _accessTokenKey = 'accessToken';
 

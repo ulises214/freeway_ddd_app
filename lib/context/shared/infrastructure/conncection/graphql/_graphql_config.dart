@@ -1,4 +1,4 @@
-import 'package:freeway_app/context/shared/domain/domain.dart';
+part of '_graphql_client_facotry.dart';
 
 /// Gets the configuration for the connection to a grapqhl client
 class GraphQLConfig {

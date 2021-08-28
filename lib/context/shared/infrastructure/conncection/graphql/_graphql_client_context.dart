@@ -1,3 +1,5 @@
+part of '_graphql_client_facotry.dart';
+
 /// Gets the context for the client
 enum GraphQLClientContext {
   /// Context ussed for login,register an user, and get the login token

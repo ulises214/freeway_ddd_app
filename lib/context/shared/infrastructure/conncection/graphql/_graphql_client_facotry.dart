@@ -2,11 +2,9 @@
 import 'package:ferry/ferry.dart';
 import 'package:freeway_app/context/shared/domain/domain.dart';
 import 'package:gql_http_link/gql_http_link.dart';
-
-// 🌎 Project imports:
-import 'package:freeway_app/context/shared/infrastructure/conncection/graphql/graphql_client_context.dart';
-import 'package:freeway_app/context/shared/infrastructure/conncection/graphql/graphql_client_not_registered.dart';
-import 'package:freeway_app/context/shared/infrastructure/conncection/graphql/graphql_config.dart';
+part '_graphql_client_context.dart';
+part '_graphql_client_not_registered.dart';
+part '_graphql_config.dart';
 
 /// The facotry for the clients to connect the application
 class GraphQLClientFactory {
