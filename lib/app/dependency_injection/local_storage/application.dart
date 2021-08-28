@@ -1,10 +1,5 @@
 import 'package:freeway_app/app/dependency_injection/container.dart';
-import 'package:freeway_app/context/local_storage/application/access_token/delete/delete_access_token_query_handler.dart';
-import 'package:freeway_app/context/local_storage/application/access_token/delete/delete_access_token_runner.dart';
-import 'package:freeway_app/context/local_storage/application/access_token/get/delete_access_token_runner.dart';
-import 'package:freeway_app/context/local_storage/application/access_token/get/get_access_token_query_handler.dart';
-import 'package:freeway_app/context/local_storage/application/access_token/save/save_access_token_query_handler.dart';
-import 'package:freeway_app/context/local_storage/application/access_token/save/save_access_token_runner.dart';
+import 'package:freeway_app/context/local_storage/application/access_token/access_token_uses_cases.dart';
 import 'package:freeway_app/context/local_storage/domain/local_storage_respository.dart';
 import 'package:freeway_app/context/local_storage/infrastructure/hive_local_storage_repository.dart';
 import 'package:freeway_app/context/local_storage/infrastructure/inmemory_local_storage_repository.dart';

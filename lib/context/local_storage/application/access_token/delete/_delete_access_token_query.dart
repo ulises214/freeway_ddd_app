@@ -1,4 +1,4 @@
-import 'package:freeway_app/context/shared/domain/query.dart';
+part of '_delete_use_case.dart';
 
 /// Creates a query to delete an stored access token
 class DeleteAccessTokenQuery extends Query {}

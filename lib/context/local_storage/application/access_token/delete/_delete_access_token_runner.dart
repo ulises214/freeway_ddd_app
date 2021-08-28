@@ -1,5 +1,4 @@
-import 'package:freeway_app/context/local_storage/domain/local_storage_respository.dart';
-import 'package:freeway_app/context/shared/application/void_response.dart';
+part of '_delete_use_case.dart';
 
 /// Make the runner for delete an accesstoken from localsotrage
 class DeleteAccessTokenRunner {

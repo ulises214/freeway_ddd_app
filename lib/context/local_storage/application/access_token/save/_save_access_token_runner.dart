@@ -1,6 +1,4 @@
-import 'package:freeway_app/context/local_storage/domain/local_storage_respository.dart';
-import 'package:freeway_app/context/shared/application/void_response.dart';
-import 'package:freeway_app/context/shared/domain/access_token.dart';
+part of '_save_use_case.dart';
 
 /// Make the runner for Save an accesstoken from localsotrage
 class SaveAccessTokenRunner {

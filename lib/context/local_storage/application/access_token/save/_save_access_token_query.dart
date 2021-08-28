@@ -1,5 +1,4 @@
-import 'package:freeway_app/context/shared/domain/access_token.dart';
-import 'package:freeway_app/context/shared/domain/query.dart';
+part of '_save_use_case.dart';
 
 /// Creates a query to Save an stored access token
 class SaveAccessTokenQuery extends Query {

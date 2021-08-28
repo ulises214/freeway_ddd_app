@@ -1,4 +1,4 @@
-import 'package:freeway_app/context/shared/domain/query.dart';
+part of '_get_use_case.dart';
 
 /// Creates a query to get an stored access token
 class GetAccessTokenQuery extends Query {}
