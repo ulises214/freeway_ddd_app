@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:freeway_app/app/ui/screens/login/screen.dart';
 import 'package:freeway_app/app/ui/screens/splash/screen.dart';
-import 'package:freeway_app/app/ui/shared/route_screen.dart';
+import 'package:freeway_app/app/ui/shared/shared.dart';
 
 /// Define the routes used in the application
 abstract class RoutesDefinitions {

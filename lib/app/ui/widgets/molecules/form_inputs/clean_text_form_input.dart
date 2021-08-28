@@ -1,7 +1,6 @@
 // 🐦 Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:freeway_app/app/ui/shared/text_form_validator.dart';
-import 'package:freeway_app/app/ui/shared/theme.dart';
+import 'package:freeway_app/app/ui/shared/shared.dart';
 
 InputBorder _borderWithColor(Color color) => UnderlineInputBorder(
       borderSide: BorderSide(width: 1, color: color),

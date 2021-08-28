@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:freeway_app/app/ui/shared/text_form_validator.dart';
-import 'package:freeway_app/app/ui/shared/theme.dart';
+import 'package:freeway_app/app/ui/shared/shared.dart';
 import 'package:freeway_app/app/ui/widgets/atoms/atoms.dart';
 import 'package:freeway_app/app/ui/widgets/molecules/form_inputs/text_form_input.dart';
 

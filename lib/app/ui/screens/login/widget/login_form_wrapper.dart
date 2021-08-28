@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:freeway_app/app/ui/shared/theme.dart';
+import 'package:freeway_app/app/ui/shared/shared.dart';
 import 'package:freeway_app/app/ui/widgets/molecules/elevated_logo.dart';
 
 /// A wrapper to define borders and set Logo in the form

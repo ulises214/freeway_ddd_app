@@ -1,6 +1,6 @@
 // 🐦 Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:freeway_app/app/ui/shared/theme.dart';
+import 'package:freeway_app/app/ui/shared/shared.dart';
 
 /// A styled circular progresss indicator
 class CircularLoading extends StatelessWidget {

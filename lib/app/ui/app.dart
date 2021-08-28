@@ -4,7 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:freeway_app/app/dependency_injection/container.dart';
 import 'package:freeway_app/app/ui/routes.dart';
 import 'package:freeway_app/app/controllers/controller.dart';
-import 'package:freeway_app/app/ui/shared/theme.dart';
+import 'package:freeway_app/app/ui/shared/shared.dart';
 
 /// The main entry point for the application
 class FreeWayApp extends StatefulWidget {

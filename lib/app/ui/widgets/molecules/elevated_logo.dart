@@ -3,8 +3,7 @@ import 'package:flutter/material.dart';
 
 // 📦 Package imports:
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:freeway_app/app/ui/shared/assets_paths.dart';
-import 'package:freeway_app/app/ui/shared/theme.dart';
+import 'package:freeway_app/app/ui/shared/shared.dart';
 
 /// The app logo with shadow
 class ElevatedLogo extends StatelessWidget {

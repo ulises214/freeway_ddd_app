@@ -1,4 +1,4 @@
-part of 'theme.dart';
+part of '_theme.dart';
 
 const _officialBlue1 = Color.fromRGBO(0x1e, 0x5b, 0x8f, 1);
 const _officialBlue2 = Color.fromRGBO(0x21, 0xA9, 0xE0, 1);

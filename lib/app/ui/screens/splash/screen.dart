@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:freeway_app/app/controllers/controller.dart';
 import 'package:freeway_app/app/dependency_injection/container.dart';
-import 'package:freeway_app/app/ui/shared/assets_paths.dart';
+import 'package:freeway_app/app/ui/shared/shared.dart';
 import 'package:freeway_app/app/ui/widgets/molecules/loading_indicator.dart';
 import 'package:freeway_app/app/ui/widgets/molecules/splash_title.dart';
 

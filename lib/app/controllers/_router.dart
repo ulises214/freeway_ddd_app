@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/material.dart' as material_dialog show showDialog;
 
-import 'package:freeway_app/app/ui/shared/route_screen.dart';
+import 'package:freeway_app/app/ui/shared/shared.dart';
 
 /// The router used in the application
 class AppRouter {

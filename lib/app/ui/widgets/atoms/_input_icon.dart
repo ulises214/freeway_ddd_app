@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:freeway_app/app/ui/shared/theme.dart';
+import 'package:freeway_app/app/ui/shared/shared.dart';
 
 /// An predefined style icon for the inputs
 class InputIcon extends StatelessWidget {

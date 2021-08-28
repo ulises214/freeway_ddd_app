@@ -2,7 +2,7 @@ import 'package:freeway_app/app/controllers/controller.dart';
 import 'package:freeway_app/app/dependency_injection/container.dart';
 import 'package:freeway_app/app/ui/routes.dart';
 import 'package:freeway_app/app/ui/screens/login/widget/restore_password_dialog.dart';
-import 'package:freeway_app/app/ui/shared/dialogs_messages.dart';
+import 'package:freeway_app/app/ui/shared/shared.dart';
 import 'package:freeway_app/context/local_storage/application/application.dart';
 import 'package:freeway_app/context/shared/application/application.dart';
 import 'package:freeway_app/context/shared/domain/domain.dart';

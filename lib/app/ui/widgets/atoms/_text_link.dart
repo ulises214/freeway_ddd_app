@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:freeway_app/app/ui/shared/theme.dart';
+import 'package:freeway_app/app/ui/shared/shared.dart';
 import 'package:freeway_app/app/ui/widgets/atoms/atoms.dart';
 
 /// A Styled text that could be clicked
