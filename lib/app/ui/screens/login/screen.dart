@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:freeway_app/app/controllers/login_screen_controller.dart';
+import 'package:freeway_app/app/controllers/controller.dart';
 import 'package:freeway_app/app/dependency_injection/container.dart';
 import 'package:freeway_app/app/ui/screens/login/widget/login_form.dart';
 import 'package:freeway_app/app/ui/screens/login/widget/login_form_wrapper.dart';

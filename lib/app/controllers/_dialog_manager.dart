@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:freeway_app/app/controllers/router.dart';
+import 'package:freeway_app/app/controllers/controller.dart';
 import 'package:freeway_app/app/dependency_injection/container.dart';
 import 'package:freeway_app/app/ui/widgets/organisms/dialogs/confirmation_dialog.dart';
 import 'package:freeway_app/app/ui/widgets/organisms/dialogs/error_dialog.dart';
