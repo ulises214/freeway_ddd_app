@@ -4,6 +4,7 @@
 import 'package:freeway_app/context/shared/domain/exceptions/invalid_argument_exception.dart';
 import 'package:freeway_app/context/shared/domain/value_object/string_value_object.dart';
 import 'package:fzregex/fzregex.dart';
+import 'package:faker/faker.dart';
 
 // TODO change regex
 const Pattern _pattern = r'(^(?:[+0]9)?[0-9]{10,12}$)';
@@ -15,5 +16,10 @@ class PhoneNumber extends RequiredStringValueObject {
     if (!Fzregex.hasMatch(this.value, _pattern)) {
       throw InvalidArgumentException('<$value> isn\'t a valid phone number');
     }
+  }
+
+  /// Generates a random phone number
+  factory PhoneNumber.random() {
+    return PhoneNumber(Faker().phoneNumber.random.fromPattern(['##########']));
   }
 }

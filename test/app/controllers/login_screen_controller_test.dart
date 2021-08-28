@@ -28,7 +28,7 @@ import 'package:faker/faker.dart';
 import './login_screen_controller_test.mocks.dart';
 
 final _fakeUserData = UserData(
-  phoneNumber: PhoneNumber(Faker().phoneNumber.random.fromPattern(['##########'])),
+  phoneNumber: PhoneNumber.random(),
   password: ValidPassword(Faker().internet.password(length: 8)),
 );
 final _fakeEmail = EmailAddress(Faker().internet.email());

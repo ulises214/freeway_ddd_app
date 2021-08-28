@@ -26,6 +26,7 @@ dependencies:
   uuid: ^3.0.4
   get_it: ^7.2.0
   fzregex: ^2.0.0
+  faker: ^2.0.0
 
 dev_dependencies:
   flutter_test:
@@ -35,7 +36,6 @@ dev_dependencies:
   ferry_generator: ^0.4.3
   build_runner: ^2.0.4
   mockito: ^5.0.10
-  faker: ^2.0.0
 import_sorter:
   emojis: true
   comments: true
