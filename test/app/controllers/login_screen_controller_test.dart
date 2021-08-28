@@ -6,7 +6,7 @@ import 'package:freeway_app/app/dependency_injection/container.dart';
 import 'package:freeway_app/app/ui/routes.dart';
 import 'package:freeway_app/app/ui/shared/dialogs_messages.dart';
 import 'package:freeway_app/context/local_storage/application/application.dart';
-import 'package:freeway_app/context/local_storage/domain/local_storage_respository.dart';
+import 'package:freeway_app/context/local_storage/domain/domain.dart';
 import 'package:freeway_app/context/shared/domain/domain.dart';
 import 'package:freeway_app/context/shared/infrastructure/infrastrucutre.dart';
 import 'package:freeway_app/context/user/application/application.dart';

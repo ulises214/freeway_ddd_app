@@ -1,8 +1,7 @@
 import 'package:freeway_app/app/dependency_injection/container.dart';
 import 'package:freeway_app/context/local_storage/application/application.dart';
-import 'package:freeway_app/context/local_storage/domain/local_storage_respository.dart';
-import 'package:freeway_app/context/local_storage/infrastructure/hive_local_storage_repository.dart';
-import 'package:freeway_app/context/local_storage/infrastructure/inmemory_local_storage_repository.dart';
+import 'package:freeway_app/context/local_storage/domain/domain.dart';
+import 'package:freeway_app/context/local_storage/infrastructure/infrastructure.dart';
 import 'package:freeway_app/context/shared/domain/domain.dart';
 
 LocalStorageRepository _getRepository() => DependencyContainer.i.get<LocalStorageRepository>();
