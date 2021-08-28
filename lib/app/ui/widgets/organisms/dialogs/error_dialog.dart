@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:freeway_app/app/ui/shared/shared.dart';
 import 'package:freeway_app/app/ui/widgets/atoms/atoms.dart';
-import 'package:freeway_app/app/ui/widgets/molecules/rounded_button.dart';
+import 'package:freeway_app/app/ui/widgets/molecules/molecules.dart';
 import 'package:freeway_app/app/ui/widgets/organisms/dialogs/basic_dialog.dart';
 
 /// Show an Dialog with Icon and [text]

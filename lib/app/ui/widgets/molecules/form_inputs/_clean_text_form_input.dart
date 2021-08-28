@@ -1,6 +1,4 @@
-// 🐦 Flutter imports:
-import 'package:flutter/material.dart';
-import 'package:freeway_app/app/ui/shared/shared.dart';
+part of '_form_inputs.dart';
 
 InputBorder _borderWithColor(Color color) => UnderlineInputBorder(
       borderSide: BorderSide(width: 1, color: color),

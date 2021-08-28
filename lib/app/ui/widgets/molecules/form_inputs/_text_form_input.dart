@@ -1,14 +1,4 @@
-// 🐦 Flutter imports:
-import 'package:flutter/material.dart';
-import 'package:freeway_app/app/ui/shared/shared.dart';
-
-OutlineInputBorder _borderWithColor(Color color) => OutlineInputBorder(
-      borderRadius: BorderRadius.circular(8),
-      borderSide: BorderSide(width: 1, color: color),
-    );
-final _border = _borderWithColor(FreeWayColors.gray4);
-final _errorBorder = _borderWithColor(FreeWayColors.danger);
-final _focusedBorder = _borderWithColor(FreeWayColors.officialBlue1);
+part of '_form_inputs.dart';
 
 /// Generic and styled input form
 class StyledTextFormInput extends StatelessWidget {

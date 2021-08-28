@@ -1,8 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:freeway_app/app/ui/shared/shared.dart';
-import 'package:freeway_app/app/ui/widgets/atoms/atoms.dart';
-import 'package:freeway_app/app/ui/widgets/molecules/form_inputs/clean_text_form_input.dart';
+part of '_form_inputs.dart';
 
 /// Styled form special for password values
 class CleanPasswordFormInput extends StatefulWidget {
@@ -32,10 +28,10 @@ class CleanPasswordFormInput extends StatefulWidget {
   final bool displayIcon;
 
   @override
-  _StyledPasswordFormInputState createState() => _StyledPasswordFormInputState();
+  _CleanPasswordFormInputState createState() => _CleanPasswordFormInputState();
 }
 
-class _StyledPasswordFormInputState extends State<CleanPasswordFormInput> {
+class _CleanPasswordFormInputState extends State<CleanPasswordFormInput> {
   bool _isPasswordHidden = true;
   @override
   Widget build(BuildContext context) {
