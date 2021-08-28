@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:freeway_app/app/ui/shared/theme.dart';
-import 'package:freeway_app/app/ui/widgets/atoms/styled_text.dart';
-import 'package:freeway_app/app/ui/widgets/atoms/text_link.dart';
+import 'package:freeway_app/app/ui/widgets/atoms/atoms.dart';
 
 /// Creates the bottom text for the login page
 class SignUpLink extends StatelessWidget {

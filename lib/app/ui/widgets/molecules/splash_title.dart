@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:freeway_app/app/ui/shared/assets_paths.dart';
 import 'package:freeway_app/app/ui/shared/theme.dart';
-import 'package:freeway_app/app/ui/widgets/atoms/styled_text.dart';
+import 'package:freeway_app/app/ui/widgets/atoms/atoms.dart';
 
 /// The title with logo displayed in splash screen
 class SplashTitle extends StatelessWidget {

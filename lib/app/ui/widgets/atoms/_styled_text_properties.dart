@@ -1,4 +1,4 @@
-part of './styled_text.dart';
+part of '_styled_text.dart';
 
 /// Define the style for the text, follow the [TextTheme] types
 enum TextType {

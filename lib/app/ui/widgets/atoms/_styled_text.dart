@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:freeway_app/app/ui/shared/theme.dart';
 
-part 'package:freeway_app/app/ui/widgets/atoms/_styled_text_properties.dart';
+part '_styled_text_properties.dart';
 
 /// A text with predefined styles based on the theme
 class StyledText extends StatelessWidget {
