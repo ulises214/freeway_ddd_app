@@ -1,6 +1,12 @@
+// 🎯 Dart imports:
 import 'dart:io';
+
+// 🐦 Flutter imports:
 import 'package:flutter/material.dart';
+
+// 🌎 Project imports:
 import 'package:freeway_app/context/shared/domain/domain.dart';
+
 part '_user_data.dart';
 part '_user.dart';
 part '_user_repository.dart';

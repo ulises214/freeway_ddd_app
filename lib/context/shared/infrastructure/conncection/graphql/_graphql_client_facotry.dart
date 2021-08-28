@@ -1,7 +1,10 @@
 // 📦 Package imports:
 import 'package:ferry/ferry.dart';
-import 'package:freeway_app/context/shared/domain/domain.dart';
 import 'package:gql_http_link/gql_http_link.dart';
+
+// 🌎 Project imports:
+import 'package:freeway_app/context/shared/domain/domain.dart';
+
 part '_graphql_client_context.dart';
 part '_graphql_client_not_registered.dart';
 part '_graphql_config.dart';

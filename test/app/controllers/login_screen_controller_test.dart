@@ -1,4 +1,10 @@
+// 📦 Package imports:
+import 'package:faker/faker.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:mockito/annotations.dart';
+import 'package:mockito/mockito.dart';
+
+// 🌎 Project imports:
 import 'package:freeway_app/app/controllers/controller.dart';
 import 'package:freeway_app/app/dependency_injection/container.dart';
 import 'package:freeway_app/app/ui/routes.dart';
@@ -9,9 +15,6 @@ import 'package:freeway_app/context/shared/domain/domain.dart';
 import 'package:freeway_app/context/shared/infrastructure/infrastrucutre.dart';
 import 'package:freeway_app/context/user/application/application.dart';
 import 'package:freeway_app/context/user/domain/domain.dart';
-import 'package:mockito/annotations.dart';
-import 'package:mockito/mockito.dart';
-import 'package:faker/faker.dart';
 import './login_screen_controller_test.mocks.dart';
 
 final _fakeUserData = UserData(

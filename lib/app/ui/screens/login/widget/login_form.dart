@@ -1,12 +1,17 @@
 // 🐦 Flutter imports:
 import 'package:flutter/material.dart';
+
+// 📦 Package imports:
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+// 🌎 Project imports:
 import 'package:freeway_app/app/ui/screens/login/widget/sign_up_link.dart';
 import 'package:freeway_app/app/ui/shared/shared.dart';
 import 'package:freeway_app/app/ui/widgets/atoms/atoms.dart';
 import 'package:freeway_app/app/ui/widgets/molecules/molecules.dart';
 import 'package:freeway_app/context/shared/domain/domain.dart';
 import 'package:freeway_app/context/user/domain/domain.dart';
+
 part '_login_form_controls.dart';
 
 /// Form for login user controllers

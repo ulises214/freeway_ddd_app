@@ -1,3 +1,4 @@
+// 🌎 Project imports:
 import 'package:freeway_app/app/controllers/controller.dart';
 import 'package:freeway_app/app/dependency_injection/container.dart';
 import 'package:freeway_app/app/ui/routes.dart';

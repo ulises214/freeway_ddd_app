@@ -1,7 +1,6 @@
 // 🌎 Project imports:
 import 'package:freeway_app/app/dependency_injection/container.dart';
 import 'package:freeway_app/context/shared/domain/domain.dart';
-
 import 'package:freeway_app/context/shared/infrastructure/infrastrucutre.dart';
 import 'package:freeway_app/context/user/application/application.dart';
 import 'package:freeway_app/context/user/domain/domain.dart';

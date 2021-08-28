@@ -1,3 +1,4 @@
+// 🌎 Project imports:
 import 'package:freeway_app/context/shared/domain/domain.dart';
 
 /// An interface to store/read data from the device

@@ -1,5 +1,6 @@
 // 🐦 Flutter imports:
 import 'package:flutter/material.dart';
+
 part '_colors.dart';
 
 /// A class with all styles required for the application
