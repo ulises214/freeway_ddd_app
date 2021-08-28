@@ -24,12 +24,11 @@ void inject(Environment env) {
       _injectInMemory();
       break;
     case Environment.devFrontConnected:
+    case Environment.production:
     case Environment.e2e:
       _injectGraphQL();
       break;
   }
-  //? Runners
-  _injectRunners();
   //? QueryHandlers
   _injectQueryHandlers();
 }
@@ -49,28 +48,14 @@ void _injectGraphQL() {
     });
 }
 
-void _injectRunners() {
-  DependencyContainer.i
-    ..put<LoginUserRunner>(() => LoginUserRunner(_getRepository()))
-    ..put<RestoreUserPasswordRunner>(
-      () => RestoreUserPasswordRunner(_getRepository()),
-    );
-}
-
 void _injectQueryHandlers() {
+  final loginQueryHandler = LoginUserQueryHandler(LoginUserRunner(_getRepository()));
+  final restorePasswordQueryHandler = RestoreUserPasswordQueryHandler(
+    RestoreUserPasswordRunner(_getRepository()),
+  );
+  _registerHandler(loginQueryHandler);
+  _registerHandler(restorePasswordQueryHandler);
   DependencyContainer.i
-    ..put<LoginUserQueryHandler>(() {
-      final queryHandler = LoginUserQueryHandler(
-        DependencyContainer.i.get<LoginUserRunner>(),
-      );
-      _registerHandler(queryHandler);
-      return queryHandler;
-    })
-    ..put<RestoreUserPasswordQueryHandler>(() {
-      final queryHandler = RestoreUserPasswordQueryHandler(
-        DependencyContainer.i.get<RestoreUserPasswordRunner>(),
-      );
-      _registerHandler(queryHandler);
-      return queryHandler;
-    });
+    ..put<LoginUserQueryHandler>(() => loginQueryHandler)
+    ..put<RestoreUserPasswordQueryHandler>(() => restorePasswordQueryHandler);
 }

@@ -5,6 +5,9 @@ import 'package:freeway_app/app/controllers/router.dart';
 import 'package:freeway_app/app/dependency_injection/container.dart';
 import 'package:freeway_app/app/ui/routes.dart';
 import 'package:freeway_app/app/ui/shared/dialogs_messages.dart';
+import 'package:freeway_app/context/local_storage/application/access_token/save/save_access_token_query_handler.dart';
+import 'package:freeway_app/context/local_storage/application/access_token/save/save_access_token_runner.dart';
+import 'package:freeway_app/context/local_storage/domain/local_storage_respository.dart';
 import 'package:freeway_app/context/shared/domain/access_token.dart';
 import 'package:freeway_app/context/shared/domain/common_types/email.dart';
 import 'package:freeway_app/context/shared/domain/common_types/phone_number.dart';
@@ -34,15 +37,18 @@ final _fakeUserData = UserData(
 final _fakeEmail = EmailAddress(Faker().internet.email());
 @GenerateMocks([
   UserRepository,
+  LocalStorageRepository,
   Logger,
   DialogManager,
   AppRouter,
 ])
 void main() {
   final userRepository = MockUserRepository();
+  final localStorageRepository = MockLocalStorageRepository();
   final queryBus = InMemoryQueryBus(QueryHandlersInformation([
     LoginUserQueryHandler(LoginUserRunner(userRepository)),
-    RestoreUserPasswordQueryHandler(RestoreUserPasswordRunner(userRepository))
+    RestoreUserPasswordQueryHandler(RestoreUserPasswordRunner(userRepository)),
+    SaveAccessTokenQueryHandler(SaveAccessTokenRunner(localStorageRepository))
   ]));
 
   final logger = MockLogger();
@@ -62,6 +68,7 @@ void main() {
   tearDown(() {
     reset(appRouter);
     reset(dialogManager);
+    reset(localStorageRepository);
     reset(logger);
     reset(userRepository);
   });
@@ -98,6 +105,7 @@ void main() {
       await controller.login(_fakeUserData);
       verifyNever(dialogManager.showErrorDialog(message: captureAnyNamed('message')));
       verify(appRouter.offAll(RoutesDefinitions.home));
+      verify(localStorageRepository.saveToken(captureAny));
     });
   });
   group('Login Screen Controller: Restore password', () {

@@ -1,5 +1,8 @@
 /// Define the execute enviroment for the application, this is used for the dependency injection
 enum Environment {
+  /// When the application is to production
+  production,
+
   /// When only are in widgets dev
   devFront,
 

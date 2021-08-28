@@ -4,6 +4,8 @@ import 'package:freeway_app/app/ui/routes.dart';
 import 'package:freeway_app/app/controllers/router.dart';
 import 'package:freeway_app/app/ui/screens/login/widget/restore_password_dialog.dart';
 import 'package:freeway_app/app/ui/shared/dialogs_messages.dart';
+import 'package:freeway_app/context/local_storage/application/access_token/save/save_access_token_query.dart';
+import 'package:freeway_app/context/shared/application/access_token_response.dart';
 import 'package:freeway_app/context/shared/domain/common_types/email.dart';
 import 'package:freeway_app/context/shared/domain/exceptions/auth_exceptions.dart';
 import 'package:freeway_app/context/shared/domain/exceptions/connection_exception.dart';
@@ -25,7 +27,8 @@ class LoginScreenController {
   /// Calls to [UserRepository] to login the user
   Future<void> login(UserData userData) async {
     try {
-      await _queryBus.ask(LoginUserQuery(userData));
+      final tokenResponse = await _queryBus.ask<AccessTokenReponse>(LoginUserQuery(userData));
+      await _queryBus.ask(SaveAccessTokenQuery(tokenResponse.token));
       _router.offAll(RoutesDefinitions.home);
     } on AuthException catch (e) {
       _manageAuthExceptions(e);
