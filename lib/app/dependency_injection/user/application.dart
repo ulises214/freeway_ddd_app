@@ -5,8 +5,7 @@ import 'package:freeway_app/context/shared/domain/domain.dart';
 import 'package:freeway_app/context/shared/infrastructure/infrastrucutre.dart';
 import 'package:freeway_app/context/user/application/application.dart';
 import 'package:freeway_app/context/user/domain/domain.dart';
-import 'package:freeway_app/context/user/infrastructure/storage/graphql/graphql_user_repository.dart';
-import 'package:freeway_app/context/user/infrastructure/storage/inmemory/in_memory_user_repository.dart';
+import 'package:freeway_app/context/user/infrastructure/infrastructure.dart';
 
 UserRepository _getRepository() => DependencyContainer.i.get<UserRepository>();
 void _registerHandler<T extends QueryHandler>(T queryH) =>

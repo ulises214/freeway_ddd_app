@@ -5,7 +5,10 @@ import 'package:ferry/ferry.dart';
 import 'package:freeway_app/context/shared/domain/domain.dart';
 import 'package:freeway_app/context/shared/infrastructure/infrastrucutre.dart';
 import 'package:freeway_app/context/user/domain/domain.dart';
-import 'package:freeway_app/context/user/infrastructure/storage/graphql/requests_builder.dart';
+import 'requests/login.req.gql.dart';
+import 'requests/sign_up_buyer.req.gql.dart';
+import 'requests/sign_up_carrier.req.gql.dart';
+part '_requests_builder.dart';
 
 /// Implements the [UserRepository] to use graphql
 class GraphQLUserRepository implements UserRepository {
